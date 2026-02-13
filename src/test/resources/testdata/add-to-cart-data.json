@@ -1,0 +1,89 @@
+{
+  "environments": {
+    "default": {
+      "baseUrl": "https://www.amazon.in"
+    },
+    "ci": {
+      "baseUrl": "https://www.amazon.in"
+    }
+  },
+  "positive": [
+    {
+      "id": "positive_1",
+      "searchTerm": "iPhone 17 Pro Max 2 TB",
+      "productName": "iPhone 17 Pro Max",
+      "expectedCartCount": 1,
+      "description": "Add single product and verify cart count"
+    },
+    {
+      "id": "positive_2",
+      "searchTerm": "wireless mouse",
+      "productName": "wireless mouse",
+      "expectedCartCount": 1,
+      "description": "Add generic product to cart"
+    }
+  ],
+  "negative": [
+    {
+      "id": "negative_1",
+      "searchTerm": "xyznonexistentproduct12345",
+      "expectNoResults": true,
+      "description": "Search with non-existent product - expect no results"
+    },
+    {
+      "id": "negative_2",
+      "searchTerm": "   ",
+      "expectErrorOrNoSearch": true,
+      "description": "Empty or whitespace search - expect no submit or error"
+    },
+    {
+      "id": "negative_3",
+      "searchTerm": "iPhone 17 Pro Max 2 TB",
+      "productName": "iPhone 17 Pro Max",
+      "expectedCartCount": 99,
+      "expectCartCountMismatch": true,
+      "description": "Verify cart count mismatch fails (negative assertion)"
+    }
+  ],
+  "edge": [
+    {
+      "id": "edge_1",
+      "searchTerm": "iPhone 17 Pro Max 2 TB",
+      "productName": "iPhone 17 Pro Max",
+      "expectedCartCount": 1,
+      "description": "Long search term - boundary of input length"
+    },
+    {
+      "id": "edge_2",
+      "searchTerm": "mouse",
+      "productName": "mouse",
+      "expectedCartCount": 1,
+      "description": "Short search term - minimal input"
+    },
+    {
+      "id": "edge_3",
+      "searchTerm": "iPhone 17 Pro Max 2 TB",
+      "productName": "iPhone 17 Pro Max",
+      "expectedCartCount": 1,
+      "description": "Product with special characters in name (space, numbers)"
+    }
+  ],
+  "boundary": [
+    {
+      "id": "boundary_1",
+      "searchTerm": "iPhone 17 Pro Max 2 TB",
+      "productName": "iPhone 17 Pro Max",
+      "expectedCartCount": 1,
+      "quantity": 1,
+      "description": "Minimum quantity (1) - single item in cart"
+    },
+    {
+      "id": "boundary_2",
+      "searchTerm": "iPhone 17 Pro Max 2 TB",
+      "productName": "iPhone 17 Pro Max",
+      "expectedCartCount": 1,
+      "quantity": 1,
+      "description": "Cart count boundary - exactly 1 item"
+    }
+  ]
+}

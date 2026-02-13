@@ -1,4 +1,4 @@
-@smoke @cart
+@cart
 Feature: Add Product to Cart on Amazon.in
 
   As a user of Amazon.in
@@ -9,7 +9,7 @@ Feature: Add Product to Cart on Amazon.in
     Given I am on the Amazon.in home page
 
   # ----- Positive scenarios (data-driven from JSON; CI can override via testdata.path) -----
-  @positive @addToCart @optimized @dataDriven
+  @smoke @positive @addToCart @optimized @dataDriven
   Scenario Outline: Add product to cart - positive (data from JSON)
     When I search for "<searchTerm>"
     Then I should see search results
@@ -25,7 +25,7 @@ Feature: Add Product to Cart on Amazon.in
       | iPhone 17 Pro Max 2 TB| iPhone 17 Pro Max  | 1                 |
       | wireless mouse       | wireless mouse     | 1                 |
 
-  @positive @addToCart @iphone @optimized
+  @smoke @positive @addToCart @iphone @optimized
   Scenario: Add iPhone 17 Pro Max to Cart (Optimized - Single Tab)
     When I search for "iPhone 17 Pro Max 2 TB"
     Then I should see search results
@@ -37,7 +37,7 @@ Feature: Add Product to Cart on Amazon.in
     And the cart count should be 1
 
   # ----- Positive scenario driven by JSON test data (scenario id) -----
-  @positive @addToCart @dataDriven @json
+  @smoke @positive @addToCart @dataDriven @json
   Scenario Outline: Add to cart - positive from JSON test data
     Given I load test scenario "<scenarioId>" from test data category "positive"
     When I search for the product from loaded scenario

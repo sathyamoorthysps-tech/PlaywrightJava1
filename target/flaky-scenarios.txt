@@ -1,0 +1,10 @@
+# Flaky scenarios (failed after 2 retries) - tag these with @flaky
+
+file:///C:/Users/sathy/OneDrive/Desktop/PlaywrightJava/src/test/resources/features/addToCart.feature:26 Add product to cart - positive (data from JSON)
+file:///C:/Users/sathy/OneDrive/Desktop/PlaywrightJava/src/test/resources/features/addToCart.feature:54 Add to cart - positive from JSON test data
+file:///C:/Users/sathy/OneDrive/Desktop/PlaywrightJava/src/test/resources/features/addToCart.feature:58 Search with non-existent product - no results
+file:///C:/Users/sathy/OneDrive/Desktop/PlaywrightJava/src/test/resources/features/addToCart.feature:85 No results - negative from JSON test data
+file:///C:/Users/sathy/OneDrive/Desktop/PlaywrightJava/src/test/resources/features/addToCart.feature:99 Add to cart with short search term (edge)
+file:///C:/Users/sathy/OneDrive/Desktop/PlaywrightJava/src/test/resources/features/addToCart.feature:120 Add to cart - edge from JSON test data
+file:///C:/Users/sathy/OneDrive/Desktop/PlaywrightJava/src/test/resources/features/addToCart.feature:124 Cart with minimum quantity one (boundary)
+file:///C:/Users/sathy/OneDrive/Desktop/PlaywrightJava/src/test/resources/features/addToCart.feature:145 Add to cart - boundary from JSON test data

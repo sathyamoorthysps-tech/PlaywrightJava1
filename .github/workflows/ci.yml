@@ -26,7 +26,7 @@ jobs:
           cache: maven
 
       - name: Install Playwright browsers
-        run: mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install --with-deps"
+        run: mvn exec:java -e -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="install --with-deps"
 
       - name: Run tests with browser ${{ matrix.browser }}
         run: mvn clean test -Dbrowser=${{ matrix.browser }} -Dheadless=true
@@ -35,6 +35,10 @@ jobs:
       - name: Generate Allure Report
         if: always()
         run: mvn allure:report
+
+      - name: Prepare artifact directories
+        if: always()
+        run: mkdir -p target/allure-results target/site/allure-maven-plugin target/cucumber-reports target/logs
 
       - name: Upload Allure Results
         if: always()

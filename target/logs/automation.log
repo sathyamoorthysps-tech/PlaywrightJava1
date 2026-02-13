@@ -1,0 +1,863 @@
+2026-02-13 16:35:53.672 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:35:53.687 [main] INFO  com.amazon.stepdefinitions.Hooks - Starting Scenario: Add product to cart - positive (data from JSON)
+2026-02-13 16:35:53.689 [main] INFO  com.amazon.stepdefinitions.Hooks - Tags: [@cart, @smoke, @positive, @addToCart, @optimized, @dataDriven]
+2026-02-13 16:35:53.690 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:35:53.695 [main] INFO  com.amazon.config.ConfigReader - Configuration properties loaded successfully
+2026-02-13 16:35:53.696 [main] INFO  com.amazon.factory.PlaywrightFactory - Initializing Playwright with browser: chromium (headless: false)
+2026-02-13 16:36:01.726 [main] INFO  com.amazon.factory.PlaywrightFactory - Launching Chromium browser
+2026-02-13 16:36:03.476 [main] INFO  com.amazon.factory.PlaywrightFactory - Browser initialized successfully with viewport: 1920x1080
+2026-02-13 16:36:03.477 [main] INFO  com.amazon.stepdefinitions.Hooks - Browser initialized for scenario: Add product to cart - positive (data from JSON)
+2026-02-13 16:36:04.118 [main] INFO  com.amazon.config.TestDataReader - Loading test data from path: testdata/add-to-cart-data.json (CI: false)
+2026-02-13 16:36:04.120 [main] INFO  com.amazon.config.TestDataReader - Loaded test data from classpath: testdata/add-to-cart-data.json
+2026-02-13 16:36:04.156 [main] INFO  com.amazon.pages.HomePage - Navigating to: https://www.amazon.in
+2026-02-13 16:36:05.295 [main] INFO  com.amazon.pages.HomePage - Navigated to Amazon.in home page
+2026-02-13 16:36:05.296 [main] DEBUG com.amazon.pages.HomePage - Waiting for selector: #twotabsearchtextbox with timeout: 10000ms
+2026-02-13 16:36:06.146 [main] INFO  com.amazon.pages.HomePage - Home page displayed: true
+2026-02-13 16:36:06.154 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Successfully navigated to Amazon.in home page
+2026-02-13 16:36:06.165 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Searching for product - iPhone 17 Pro Max 2 TB
+2026-02-13 16:36:06.165 [main] INFO  com.amazon.pages.HomePage - Searching for product: iPhone 17 Pro Max 2 TB
+2026-02-13 16:36:07.287 [main] INFO  com.amazon.pages.HomePage - Search submitted using role-based selectors
+2026-02-13 16:36:09.303 [main] INFO  com.amazon.pages.HomePage - Search submitted successfully
+2026-02-13 16:36:10.601 [main] DEBUG com.amazon.pages.SearchResultsPage - Waiting for selector: div.s-main-slot with timeout: 15000ms
+2026-02-13 16:36:10.670 [main] INFO  com.amazon.pages.SearchResultsPage - Search results displayed: true (count: 17)
+2026-02-13 16:36:10.683 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Search results count: 17
+2026-02-13 16:36:10.689 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Clicking on product - iPhone 17 Pro Max
+2026-02-13 16:36:10.689 [main] INFO  com.amazon.pages.SearchResultsPage - Clicking on product in same tab: iPhone 17 Pro Max
+2026-02-13 16:36:13.958 [main] DEBUG com.amazon.pages.SearchResultsPage - Role-based link click failed, trying partial match
+2026-02-13 16:36:13.958 [main] INFO  com.amazon.pages.SearchResultsPage - Getting product URL for: iPhone 17 Pro Max
+2026-02-13 16:36:15.978 [main] INFO  com.amazon.pages.SearchResultsPage - Total search results found: 17
+2026-02-13 16:36:15.991 [main] DEBUG com.amazon.pages.SearchResultsPage - Result 0: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:36:15.991 [main] INFO  com.amazon.pages.SearchResultsPage - Found matching product at index 0: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:36:16.007 [main] DEBUG com.amazon.pages.SearchResultsPage - Found link using 'a.a-link-normal.s-underline-text' selector
+2026-02-13 16:36:16.018 [main] INFO  com.amazon.pages.SearchResultsPage - Product URL: https://www.amazon.in/iPhone-17-Pro-Max-Promotion/dp/B0FQFVX9ZZ/ref=sr_1_1?dib=eyJ2IjoiMSJ9.NFJLUmDgx_RkdWUjiD8zQy-jiplTARIjLnubLThpbErKtyL7RCIoBdKibKH-h8AJFPSoQ9DZioBd0p3_HOvoRDBji4S6N35s2GxEppijsWDSOtTiA7LiAom6dSjrlfPfHb6JKQMmX01HmTABf-Gqqzc6qrgR307ywD5S-QmHUazAo2EDrFVV1V2_NrPrT5AZGIpeTeyWTTZDs27YI0KEzJwb7b0JNqixuk9bimiU8H0.Dd-H8y6_SYzDk4w5nl377-zHzkBkcFTn0x4DYH9GoBw&dib_tag=se&keywords=iPhone+17+Pro+Max+2+TB&qid=1770980765&sr=8-1#customerReviews
+2026-02-13 16:36:16.019 [main] INFO  com.amazon.pages.SearchResultsPage - Navigating to product URL in same tab: https://www.amazon.in/iPhone-17-Pro-Max-Promotion/dp/B0FQFVX9ZZ/ref=sr_1_1?dib=eyJ2IjoiMSJ9.NFJLUmDgx_RkdWUjiD8zQy-jiplTARIjLnubLThpbErKtyL7RCIoBdKibKH-h8AJFPSoQ9DZioBd0p3_HOvoRDBji4S6N35s2GxEppijsWDSOtTiA7LiAom6dSjrlfPfHb6JKQMmX01HmTABf-Gqqzc6qrgR307ywD5S-QmHUazAo2EDrFVV1V2_NrPrT5AZGIpeTeyWTTZDs27YI0KEzJwb7b0JNqixuk9bimiU8H0.Dd-H8y6_SYzDk4w5nl377-zHzkBkcFTn0x4DYH9GoBw&dib_tag=se&keywords=iPhone+17+Pro+Max+2+TB&qid=1770980765&sr=8-1#customerReviews
+2026-02-13 16:36:23.953 [main] INFO  com.amazon.pages.SearchResultsPage - Product page loaded in same tab successfully
+2026-02-13 16:36:25.967 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found 3 frames on the page
+2026-02-13 16:36:25.968 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found relevant iframe: 
+2026-02-13 16:36:25.968 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found relevant iframe: 
+2026-02-13 16:36:25.968 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found relevant iframe: 
+2026-02-13 16:36:25.977 [main] DEBUG com.amazon.pages.ProductPage - Waiting for selector: span#productTitle with timeout: 10000ms
+2026-02-13 16:36:26.043 [main] INFO  com.amazon.pages.ProductPage - Product title: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:36:26.044 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Product page loaded in same tab. Title: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:36:26.733 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Clicking Add to Cart button
+2026-02-13 16:36:26.733 [main] INFO  com.amazon.pages.ProductPage - Clicking Add to Cart button
+2026-02-13 16:36:29.889 [main] DEBUG com.amazon.pages.ProductPage - Scroll result: scrolled
+2026-02-13 16:36:31.404 [main] INFO  com.amazon.pages.ProductPage - Found 3 frames on product page
+2026-02-13 16:36:33.508 [main] INFO  com.amazon.pages.ProductPage - Attempting Add to Cart via role-based selector
+2026-02-13 16:36:35.787 [main] INFO  com.amazon.pages.ProductPage - Add to Cart clicked successfully using role-based selector
+2026-02-13 16:36:42.351 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Verifying product is added to cart
+2026-02-13 16:36:47.383 [main] INFO  com.amazon.pages.ProductPage - Cart confirmation message found
+2026-02-13 16:36:47.384 [main] INFO  com.amazon.pages.ProductPage - Item added to cart confirmation: true
+2026-02-13 16:36:47.776 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Product successfully added to cart!
+2026-02-13 16:36:47.781 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Clicking 'item in cart' link
+2026-02-13 16:36:47.782 [main] INFO  com.amazon.pages.ProductPage - Clicking 'item in cart' link
+2026-02-13 16:36:50.274 [main] INFO  com.amazon.pages.ProductPage - Clicked 'item in cart' link using role-based selector
+2026-02-13 16:36:51.838 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Verifying product 'iPhone 17 Pro Max' is available in cart
+2026-02-13 16:36:51.875 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Cart badge count before navigation: 1
+2026-02-13 16:36:51.876 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Cart badge indicates item was added (count: 1)
+2026-02-13 16:36:51.878 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Already on cart page, refreshing
+2026-02-13 16:36:56.486 [main] WARN  com.amazon.stepdefinitions.AddToCartSteps - Cart page shows error or empty message. Page might require login or cart is empty.
+2026-02-13 16:36:56.486 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Cart page shows error but URL indicates cart navigation - item was likely added
+2026-02-13 16:36:56.487 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Note: Amazon may require login to view cart details
+2026-02-13 16:36:56.490 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Verifying cart count is 1
+2026-02-13 16:36:56.500 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Cart count from badge: 1
+2026-02-13 16:36:56.501 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Cart count verified: 1
+2026-02-13 16:36:56.509 [main] INFO  com.amazon.stepdefinitions.Hooks - Finishing Scenario: Add product to cart - positive (data from JSON) - Status: PASSED
+2026-02-13 16:36:56.509 [main] INFO  com.amazon.factory.PlaywrightFactory - Tearing down Playwright resources
+2026-02-13 16:36:57.500 [main] INFO  com.amazon.factory.PlaywrightFactory - Playwright resources closed successfully
+2026-02-13 16:36:57.500 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:36:57.501 [main] INFO  com.amazon.stepdefinitions.Hooks - Scenario Completed: Add product to cart - positive (data from JSON)
+2026-02-13 16:36:57.502 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:36:57.600 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:36:57.600 [main] INFO  com.amazon.stepdefinitions.Hooks - Starting Scenario: Add product to cart - positive (data from JSON)
+2026-02-13 16:36:57.601 [main] INFO  com.amazon.stepdefinitions.Hooks - Tags: [@cart, @smoke, @positive, @addToCart, @optimized, @dataDriven]
+2026-02-13 16:36:57.602 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:36:57.602 [main] INFO  com.amazon.factory.PlaywrightFactory - Initializing Playwright with browser: chromium (headless: false)
+2026-02-13 16:36:59.327 [main] INFO  com.amazon.factory.PlaywrightFactory - Launching Chromium browser
+2026-02-13 16:37:00.710 [main] INFO  com.amazon.factory.PlaywrightFactory - Browser initialized successfully with viewport: 1920x1080
+2026-02-13 16:37:00.715 [main] INFO  com.amazon.stepdefinitions.Hooks - Browser initialized for scenario: Add product to cart - positive (data from JSON)
+2026-02-13 16:37:00.737 [main] INFO  com.amazon.config.TestDataReader - Loading test data from path: testdata/add-to-cart-data.json (CI: false)
+2026-02-13 16:37:00.738 [main] INFO  com.amazon.config.TestDataReader - Loaded test data from classpath: testdata/add-to-cart-data.json
+2026-02-13 16:37:00.745 [main] INFO  com.amazon.pages.HomePage - Navigating to: https://www.amazon.in
+2026-02-13 16:37:04.970 [main] INFO  com.amazon.pages.HomePage - Navigated to Amazon.in home page
+2026-02-13 16:37:04.971 [main] DEBUG com.amazon.pages.HomePage - Waiting for selector: #twotabsearchtextbox with timeout: 10000ms
+2026-02-13 16:37:05.736 [main] INFO  com.amazon.pages.HomePage - Home page displayed: true
+2026-02-13 16:37:05.736 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Successfully navigated to Amazon.in home page
+2026-02-13 16:37:05.740 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Searching for product - wireless mouse
+2026-02-13 16:37:05.741 [main] INFO  com.amazon.pages.HomePage - Searching for product: wireless mouse
+2026-02-13 16:37:07.378 [main] INFO  com.amazon.pages.HomePage - Search submitted using role-based selectors
+2026-02-13 16:37:12.587 [main] INFO  com.amazon.pages.HomePage - Search submitted successfully
+2026-02-13 16:37:13.951 [main] DEBUG com.amazon.pages.SearchResultsPage - Waiting for selector: div.s-main-slot with timeout: 15000ms
+2026-02-13 16:37:14.040 [main] INFO  com.amazon.pages.SearchResultsPage - Search results displayed: true (count: 22)
+2026-02-13 16:37:14.049 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Search results count: 22
+2026-02-13 16:37:14.053 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Clicking on product - wireless mouse
+2026-02-13 16:37:14.054 [main] INFO  com.amazon.pages.SearchResultsPage - Clicking on product in same tab: wireless mouse
+2026-02-13 16:37:18.377 [main] DEBUG com.amazon.pages.SearchResultsPage - Role-based link click failed, trying partial match
+2026-02-13 16:37:18.377 [main] INFO  com.amazon.pages.SearchResultsPage - Getting product URL for: wireless mouse
+2026-02-13 16:37:20.392 [main] INFO  com.amazon.pages.SearchResultsPage - Total search results found: 22
+2026-02-13 16:37:20.403 [main] DEBUG com.amazon.pages.SearchResultsPage - Result 0: Logitech MX Master 2S Bluetooth Edition Wireless Mouse, Multi-Surface, Hyper-Fast Scrolling, Ergonomic, Rechargeable, Connects Up to 3 Mac/PC Computers
+2026-02-13 16:37:20.403 [main] INFO  com.amazon.pages.SearchResultsPage - Found matching product at index 0: Logitech MX Master 2S Bluetooth Edition Wireless Mouse, Multi-Surface, Hyper-Fast Scrolling, Ergonomic, Rechargeable, Connects Up to 3 Mac/PC Computers
+2026-02-13 16:37:20.427 [main] DEBUG com.amazon.pages.SearchResultsPage - Found link using 'a.a-link-normal.s-underline-text' selector
+2026-02-13 16:37:20.440 [main] INFO  com.amazon.pages.SearchResultsPage - Product URL: #
+2026-02-13 16:37:20.440 [main] INFO  com.amazon.pages.SearchResultsPage - Navigating to product URL in same tab: #
+2026-02-13 16:37:20.592 [main] INFO  com.amazon.stepdefinitions.Hooks - Finishing Scenario: Add product to cart - positive (data from JSON) - Status: FAILED
+2026-02-13 16:37:20.593 [main] ERROR com.amazon.stepdefinitions.Hooks - Scenario FAILED: Add product to cart - positive (data from JSON)
+2026-02-13 16:37:24.666 [main] INFO  com.amazon.stepdefinitions.Hooks - Failure screenshot captured
+2026-02-13 16:37:24.667 [main] INFO  com.amazon.factory.PlaywrightFactory - Tearing down Playwright resources
+2026-02-13 16:37:25.251 [main] INFO  com.amazon.factory.PlaywrightFactory - Playwright resources closed successfully
+2026-02-13 16:37:25.251 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:37:25.251 [main] INFO  com.amazon.stepdefinitions.Hooks - Scenario Completed: Add product to cart - positive (data from JSON)
+2026-02-13 16:37:25.251 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:37:25.283 [main] WARN  com.amazon.plugins.FlakyAndRcaPlugin - Scenario failed (will be tagged as flaky if still failing after retries): Add product to cart - positive (data from JSON)
+2026-02-13 16:37:25.311 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:37:25.311 [main] INFO  com.amazon.stepdefinitions.Hooks - Starting Scenario: Add iPhone 17 Pro Max to Cart (Optimized - Single Tab)
+2026-02-13 16:37:25.312 [main] INFO  com.amazon.stepdefinitions.Hooks - Tags: [@cart, @smoke, @positive, @addToCart, @iphone, @optimized]
+2026-02-13 16:37:25.312 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:37:25.313 [main] INFO  com.amazon.factory.PlaywrightFactory - Initializing Playwright with browser: chromium (headless: false)
+2026-02-13 16:37:27.540 [main] INFO  com.amazon.factory.PlaywrightFactory - Launching Chromium browser
+2026-02-13 16:37:29.011 [main] INFO  com.amazon.factory.PlaywrightFactory - Browser initialized successfully with viewport: 1920x1080
+2026-02-13 16:37:29.012 [main] INFO  com.amazon.stepdefinitions.Hooks - Browser initialized for scenario: Add iPhone 17 Pro Max to Cart (Optimized - Single Tab)
+2026-02-13 16:37:29.023 [main] INFO  com.amazon.config.TestDataReader - Loading test data from path: testdata/add-to-cart-data.json (CI: false)
+2026-02-13 16:37:29.026 [main] INFO  com.amazon.config.TestDataReader - Loaded test data from classpath: testdata/add-to-cart-data.json
+2026-02-13 16:37:29.028 [main] INFO  com.amazon.pages.HomePage - Navigating to: https://www.amazon.in
+2026-02-13 16:37:30.169 [main] INFO  com.amazon.pages.HomePage - Navigated to Amazon.in home page
+2026-02-13 16:37:30.170 [main] DEBUG com.amazon.pages.HomePage - Waiting for selector: #twotabsearchtextbox with timeout: 10000ms
+2026-02-13 16:37:30.902 [main] INFO  com.amazon.pages.HomePage - Home page displayed: true
+2026-02-13 16:37:30.903 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Successfully navigated to Amazon.in home page
+2026-02-13 16:37:30.905 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Searching for product - iPhone 17 Pro Max 2 TB
+2026-02-13 16:37:30.905 [main] INFO  com.amazon.pages.HomePage - Searching for product: iPhone 17 Pro Max 2 TB
+2026-02-13 16:37:34.692 [main] INFO  com.amazon.pages.HomePage - Search submitted using role-based selectors
+2026-02-13 16:37:36.450 [main] INFO  com.amazon.pages.HomePage - Search submitted successfully
+2026-02-13 16:37:37.218 [main] DEBUG com.amazon.pages.SearchResultsPage - Waiting for selector: div.s-main-slot with timeout: 15000ms
+2026-02-13 16:37:37.287 [main] INFO  com.amazon.pages.SearchResultsPage - Search results displayed: true (count: 17)
+2026-02-13 16:37:37.294 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Search results count: 17
+2026-02-13 16:37:37.296 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Clicking on product - iPhone 17 Pro Max
+2026-02-13 16:37:37.296 [main] INFO  com.amazon.pages.SearchResultsPage - Clicking on product in same tab: iPhone 17 Pro Max
+2026-02-13 16:37:40.059 [main] DEBUG com.amazon.pages.SearchResultsPage - Role-based link click failed, trying partial match
+2026-02-13 16:37:40.059 [main] INFO  com.amazon.pages.SearchResultsPage - Getting product URL for: iPhone 17 Pro Max
+2026-02-13 16:37:42.077 [main] INFO  com.amazon.pages.SearchResultsPage - Total search results found: 17
+2026-02-13 16:37:42.091 [main] DEBUG com.amazon.pages.SearchResultsPage - Result 0: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:37:42.091 [main] INFO  com.amazon.pages.SearchResultsPage - Found matching product at index 0: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:37:42.109 [main] DEBUG com.amazon.pages.SearchResultsPage - Found link using 'a.a-link-normal.s-underline-text' selector
+2026-02-13 16:37:42.118 [main] INFO  com.amazon.pages.SearchResultsPage - Product URL: https://www.amazon.in/iPhone-17-Pro-Max-Promotion/dp/B0FQFVX9ZZ/ref=sr_1_1?crid=36FAQ2T6DCO8D&dib=eyJ2IjoiMSJ9.NFJLUmDgx_RkdWUjiD8zQy-jiplTARIjLnubLThpbErKtyL7RCIoBdKibKH-h8AJFPSoQ9DZioBd0p3_HOvoRDBji4S6N35s2GxEppijsWDSOtTiA7LiAom6dSjrlfPfHb6JKQMmX01HmTABf-Gqqzc6qrgR307ywD5S-QmHUazAo2EDrFVV1V2_NrPrT5AZGIpeTeyWTTZDs27YI0KEzJwb7b0JNqixuk9bimiU8H0.za2tN1cWD_DjiSiA0T8n9RgeTmBuglAHaIxDovlPqNI&dib_tag=se&keywords=iPhone+17+Pro+Max+2+TB&qid=1770980853&sprefix=iphone+17+pro+max+2+tb%2Caps%2C529&sr=8-1#customerReviews
+2026-02-13 16:37:42.118 [main] INFO  com.amazon.pages.SearchResultsPage - Navigating to product URL in same tab: https://www.amazon.in/iPhone-17-Pro-Max-Promotion/dp/B0FQFVX9ZZ/ref=sr_1_1?crid=36FAQ2T6DCO8D&dib=eyJ2IjoiMSJ9.NFJLUmDgx_RkdWUjiD8zQy-jiplTARIjLnubLThpbErKtyL7RCIoBdKibKH-h8AJFPSoQ9DZioBd0p3_HOvoRDBji4S6N35s2GxEppijsWDSOtTiA7LiAom6dSjrlfPfHb6JKQMmX01HmTABf-Gqqzc6qrgR307ywD5S-QmHUazAo2EDrFVV1V2_NrPrT5AZGIpeTeyWTTZDs27YI0KEzJwb7b0JNqixuk9bimiU8H0.za2tN1cWD_DjiSiA0T8n9RgeTmBuglAHaIxDovlPqNI&dib_tag=se&keywords=iPhone+17+Pro+Max+2+TB&qid=1770980853&sprefix=iphone+17+pro+max+2+tb%2Caps%2C529&sr=8-1#customerReviews
+2026-02-13 16:37:50.665 [main] INFO  com.amazon.pages.SearchResultsPage - Product page loaded in same tab successfully
+2026-02-13 16:37:52.678 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found 3 frames on the page
+2026-02-13 16:37:52.679 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found relevant iframe: 
+2026-02-13 16:37:52.679 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found relevant iframe: 
+2026-02-13 16:37:52.679 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found relevant iframe: 
+2026-02-13 16:37:52.679 [main] DEBUG com.amazon.pages.ProductPage - Waiting for selector: span#productTitle with timeout: 10000ms
+2026-02-13 16:37:52.760 [main] INFO  com.amazon.pages.ProductPage - Product title: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:37:52.760 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Product page loaded in same tab. Title: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:37:53.437 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Clicking Add to Cart button
+2026-02-13 16:37:53.437 [main] INFO  com.amazon.pages.ProductPage - Clicking Add to Cart button
+2026-02-13 16:37:56.602 [main] DEBUG com.amazon.pages.ProductPage - Scroll result: scrolled
+2026-02-13 16:37:58.117 [main] INFO  com.amazon.pages.ProductPage - Found 3 frames on product page
+2026-02-13 16:38:00.217 [main] INFO  com.amazon.pages.ProductPage - Attempting Add to Cart via role-based selector
+2026-02-13 16:38:01.268 [main] INFO  com.amazon.pages.ProductPage - Add to Cart clicked successfully using role-based selector
+2026-02-13 16:38:06.174 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Verifying product is added to cart
+2026-02-13 16:38:11.215 [main] INFO  com.amazon.pages.ProductPage - Cart confirmation message found
+2026-02-13 16:38:11.216 [main] INFO  com.amazon.pages.ProductPage - Item added to cart confirmation: true
+2026-02-13 16:38:11.615 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Product successfully added to cart!
+2026-02-13 16:38:11.617 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Clicking 'item in cart' link
+2026-02-13 16:38:11.618 [main] INFO  com.amazon.pages.ProductPage - Clicking 'item in cart' link
+2026-02-13 16:38:14.104 [main] INFO  com.amazon.pages.ProductPage - Clicked 'item in cart' link using role-based selector
+2026-02-13 16:38:15.330 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Verifying product 'iPhone 17 Pro Max' is available in cart
+2026-02-13 16:38:15.354 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Cart badge count before navigation: 1
+2026-02-13 16:38:15.355 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Cart badge indicates item was added (count: 1)
+2026-02-13 16:38:15.355 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Already on cart page, refreshing
+2026-02-13 16:38:19.700 [main] WARN  com.amazon.stepdefinitions.AddToCartSteps - Cart page shows error or empty message. Page might require login or cart is empty.
+2026-02-13 16:38:19.700 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Cart page shows error but URL indicates cart navigation - item was likely added
+2026-02-13 16:38:19.700 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Note: Amazon may require login to view cart details
+2026-02-13 16:38:19.702 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Verifying cart count is 1
+2026-02-13 16:38:19.709 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Cart count from badge: 1
+2026-02-13 16:38:19.710 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Cart count verified: 1
+2026-02-13 16:38:19.711 [main] INFO  com.amazon.stepdefinitions.Hooks - Finishing Scenario: Add iPhone 17 Pro Max to Cart (Optimized - Single Tab) - Status: PASSED
+2026-02-13 16:38:19.713 [main] INFO  com.amazon.factory.PlaywrightFactory - Tearing down Playwright resources
+2026-02-13 16:38:21.035 [main] INFO  com.amazon.factory.PlaywrightFactory - Playwright resources closed successfully
+2026-02-13 16:38:21.036 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:38:21.036 [main] INFO  com.amazon.stepdefinitions.Hooks - Scenario Completed: Add iPhone 17 Pro Max to Cart (Optimized - Single Tab)
+2026-02-13 16:38:21.036 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:38:21.088 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:38:21.089 [main] INFO  com.amazon.stepdefinitions.Hooks - Starting Scenario: Add to cart - positive from JSON test data
+2026-02-13 16:38:21.090 [main] INFO  com.amazon.stepdefinitions.Hooks - Tags: [@cart, @smoke, @positive, @addToCart, @dataDriven, @json]
+2026-02-13 16:38:21.090 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:38:21.091 [main] INFO  com.amazon.factory.PlaywrightFactory - Initializing Playwright with browser: chromium (headless: false)
+2026-02-13 16:38:24.878 [main] INFO  com.amazon.factory.PlaywrightFactory - Launching Chromium browser
+2026-02-13 16:38:26.609 [main] INFO  com.amazon.factory.PlaywrightFactory - Browser initialized successfully with viewport: 1920x1080
+2026-02-13 16:38:26.609 [main] INFO  com.amazon.stepdefinitions.Hooks - Browser initialized for scenario: Add to cart - positive from JSON test data
+2026-02-13 16:38:26.615 [main] INFO  com.amazon.config.TestDataReader - Loading test data from path: testdata/add-to-cart-data.json (CI: false)
+2026-02-13 16:38:26.619 [main] INFO  com.amazon.config.TestDataReader - Loaded test data from classpath: testdata/add-to-cart-data.json
+2026-02-13 16:38:26.621 [main] INFO  com.amazon.pages.HomePage - Navigating to: https://www.amazon.in
+2026-02-13 16:38:31.888 [main] INFO  com.amazon.pages.HomePage - Navigated to Amazon.in home page
+2026-02-13 16:38:31.889 [main] DEBUG com.amazon.pages.HomePage - Waiting for selector: #twotabsearchtextbox with timeout: 10000ms
+2026-02-13 16:38:33.690 [main] INFO  com.amazon.pages.HomePage - Home page displayed: true
+2026-02-13 16:38:33.691 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Successfully navigated to Amazon.in home page
+2026-02-13 16:38:33.694 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Loading test scenario: positive_1 from category: positive
+2026-02-13 16:38:33.712 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Searching for product - iPhone 17 Pro Max 2 TB
+2026-02-13 16:38:33.712 [main] INFO  com.amazon.pages.HomePage - Searching for product: iPhone 17 Pro Max 2 TB
+2026-02-13 16:38:37.360 [main] INFO  com.amazon.pages.HomePage - Search submitted using role-based selectors
+2026-02-13 16:38:39.456 [main] INFO  com.amazon.pages.HomePage - Search submitted successfully
+2026-02-13 16:38:40.774 [main] DEBUG com.amazon.pages.SearchResultsPage - Waiting for selector: div.s-main-slot with timeout: 15000ms
+2026-02-13 16:38:40.876 [main] INFO  com.amazon.pages.SearchResultsPage - Search results displayed: true (count: 17)
+2026-02-13 16:38:40.888 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Search results count: 17
+2026-02-13 16:38:40.891 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Clicking on product - iPhone 17 Pro Max
+2026-02-13 16:38:40.891 [main] INFO  com.amazon.pages.SearchResultsPage - Clicking on product in same tab: iPhone 17 Pro Max
+2026-02-13 16:38:43.647 [main] DEBUG com.amazon.pages.SearchResultsPage - Role-based link click failed, trying partial match
+2026-02-13 16:38:43.647 [main] INFO  com.amazon.pages.SearchResultsPage - Getting product URL for: iPhone 17 Pro Max
+2026-02-13 16:38:45.666 [main] INFO  com.amazon.pages.SearchResultsPage - Total search results found: 17
+2026-02-13 16:38:45.677 [main] DEBUG com.amazon.pages.SearchResultsPage - Result 0: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:38:45.677 [main] INFO  com.amazon.pages.SearchResultsPage - Found matching product at index 0: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:38:45.692 [main] DEBUG com.amazon.pages.SearchResultsPage - Found link using 'a.a-link-normal.s-underline-text' selector
+2026-02-13 16:38:45.701 [main] INFO  com.amazon.pages.SearchResultsPage - Product URL: https://www.amazon.in/iPhone-17-Pro-Max-Promotion/dp/B0FQFVX9ZZ/ref=sr_1_1?crid=1YC3OO8SOECI6&dib=eyJ2IjoiMSJ9.NFJLUmDgx_RkdWUjiD8zQy-jiplTARIjLnubLThpbErKtyL7RCIoBdKibKH-h8AJFPSoQ9DZioBd0p3_HOvoRDBji4S6N35s2GxEppijsWDSOtTiA7LiAom6dSjrlfPfHb6JKQMmX01HmTABf-Gqqzc6qrgR307ywD5S-QmHUazAo2EDrFVV1V2_NrPrT5AZGIpeTeyWTTZDs27YI0KEzJwb7b0JNqixuk9bimiU8H0.BYqFp5fByY2kJpVRH09IfEmulbLESOdtwey-qG4dIbo&dib_tag=se&keywords=iPhone+17+Pro+Max+2+TB&qid=1770980915&sprefix=%2Caps%2C450&sr=8-1#customerReviews
+2026-02-13 16:38:45.701 [main] INFO  com.amazon.pages.SearchResultsPage - Navigating to product URL in same tab: https://www.amazon.in/iPhone-17-Pro-Max-Promotion/dp/B0FQFVX9ZZ/ref=sr_1_1?crid=1YC3OO8SOECI6&dib=eyJ2IjoiMSJ9.NFJLUmDgx_RkdWUjiD8zQy-jiplTARIjLnubLThpbErKtyL7RCIoBdKibKH-h8AJFPSoQ9DZioBd0p3_HOvoRDBji4S6N35s2GxEppijsWDSOtTiA7LiAom6dSjrlfPfHb6JKQMmX01HmTABf-Gqqzc6qrgR307ywD5S-QmHUazAo2EDrFVV1V2_NrPrT5AZGIpeTeyWTTZDs27YI0KEzJwb7b0JNqixuk9bimiU8H0.BYqFp5fByY2kJpVRH09IfEmulbLESOdtwey-qG4dIbo&dib_tag=se&keywords=iPhone+17+Pro+Max+2+TB&qid=1770980915&sprefix=%2Caps%2C450&sr=8-1#customerReviews
+2026-02-13 16:38:55.924 [main] INFO  com.amazon.pages.SearchResultsPage - Product page loaded in same tab successfully
+2026-02-13 16:38:57.938 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found 3 frames on the page
+2026-02-13 16:38:57.939 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found relevant iframe: 
+2026-02-13 16:38:57.939 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found relevant iframe: 
+2026-02-13 16:38:57.939 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found relevant iframe: 
+2026-02-13 16:38:57.940 [main] DEBUG com.amazon.pages.ProductPage - Waiting for selector: span#productTitle with timeout: 10000ms
+2026-02-13 16:38:58.039 [main] INFO  com.amazon.pages.ProductPage - Product title: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:38:58.039 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Product page loaded in same tab. Title: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:38:58.775 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Clicking Add to Cart button
+2026-02-13 16:38:58.775 [main] INFO  com.amazon.pages.ProductPage - Clicking Add to Cart button
+2026-02-13 16:39:01.951 [main] DEBUG com.amazon.pages.ProductPage - Scroll result: scrolled
+2026-02-13 16:39:03.454 [main] INFO  com.amazon.pages.ProductPage - Found 3 frames on product page
+2026-02-13 16:39:05.525 [main] INFO  com.amazon.pages.ProductPage - Attempting Add to Cart via role-based selector
+2026-02-13 16:39:08.134 [main] INFO  com.amazon.pages.ProductPage - Add to Cart clicked successfully using role-based selector
+2026-02-13 16:39:12.840 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Verifying product is added to cart
+2026-02-13 16:39:17.878 [main] INFO  com.amazon.pages.ProductPage - Cart confirmation message found
+2026-02-13 16:39:17.878 [main] INFO  com.amazon.pages.ProductPage - Item added to cart confirmation: true
+2026-02-13 16:39:18.265 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Product successfully added to cart!
+2026-02-13 16:39:18.268 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Clicking 'item in cart' link
+2026-02-13 16:39:18.268 [main] INFO  com.amazon.pages.ProductPage - Clicking 'item in cart' link
+2026-02-13 16:39:22.181 [main] INFO  com.amazon.pages.ProductPage - Clicked 'item in cart' link using role-based selector
+2026-02-13 16:39:25.593 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Verifying product 'iPhone 17 Pro Max' is available in cart
+2026-02-13 16:39:25.724 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Cart badge count before navigation: 1
+2026-02-13 16:39:25.724 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Cart badge indicates item was added (count: 1)
+2026-02-13 16:39:25.724 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Already on cart page, refreshing
+2026-02-13 16:39:29.883 [main] WARN  com.amazon.stepdefinitions.AddToCartSteps - Cart page shows error or empty message. Page might require login or cart is empty.
+2026-02-13 16:39:29.884 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Cart page shows error but URL indicates cart navigation - item was likely added
+2026-02-13 16:39:29.885 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Note: Amazon may require login to view cart details
+2026-02-13 16:39:29.900 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Verifying cart count is 1
+2026-02-13 16:39:29.926 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Cart count from badge: 1
+2026-02-13 16:39:29.927 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Cart count verified: 1
+2026-02-13 16:39:29.933 [main] INFO  com.amazon.stepdefinitions.Hooks - Finishing Scenario: Add to cart - positive from JSON test data - Status: PASSED
+2026-02-13 16:39:29.933 [main] INFO  com.amazon.factory.PlaywrightFactory - Tearing down Playwright resources
+2026-02-13 16:39:31.175 [main] INFO  com.amazon.factory.PlaywrightFactory - Playwright resources closed successfully
+2026-02-13 16:39:31.175 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:39:31.175 [main] INFO  com.amazon.stepdefinitions.Hooks - Scenario Completed: Add to cart - positive from JSON test data
+2026-02-13 16:39:31.175 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:39:31.203 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:39:31.203 [main] INFO  com.amazon.stepdefinitions.Hooks - Starting Scenario: Add to cart - positive from JSON test data
+2026-02-13 16:39:31.204 [main] INFO  com.amazon.stepdefinitions.Hooks - Tags: [@cart, @smoke, @positive, @addToCart, @dataDriven, @json]
+2026-02-13 16:39:31.205 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:39:31.206 [main] INFO  com.amazon.factory.PlaywrightFactory - Initializing Playwright with browser: chromium (headless: false)
+2026-02-13 16:39:33.446 [main] INFO  com.amazon.factory.PlaywrightFactory - Launching Chromium browser
+2026-02-13 16:39:35.083 [main] INFO  com.amazon.factory.PlaywrightFactory - Browser initialized successfully with viewport: 1920x1080
+2026-02-13 16:39:35.087 [main] INFO  com.amazon.stepdefinitions.Hooks - Browser initialized for scenario: Add to cart - positive from JSON test data
+2026-02-13 16:39:35.096 [main] INFO  com.amazon.config.TestDataReader - Loading test data from path: testdata/add-to-cart-data.json (CI: false)
+2026-02-13 16:39:35.099 [main] INFO  com.amazon.config.TestDataReader - Loaded test data from classpath: testdata/add-to-cart-data.json
+2026-02-13 16:39:35.102 [main] INFO  com.amazon.pages.HomePage - Navigating to: https://www.amazon.in
+2026-02-13 16:39:37.354 [main] INFO  com.amazon.pages.HomePage - Navigated to Amazon.in home page
+2026-02-13 16:39:37.355 [main] DEBUG com.amazon.pages.HomePage - Waiting for selector: #twotabsearchtextbox with timeout: 10000ms
+2026-02-13 16:39:39.316 [main] INFO  com.amazon.pages.HomePage - Home page displayed: true
+2026-02-13 16:39:39.317 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Successfully navigated to Amazon.in home page
+2026-02-13 16:39:39.328 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Loading test scenario: positive_2 from category: positive
+2026-02-13 16:39:39.336 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Searching for product - wireless mouse
+2026-02-13 16:39:39.337 [main] INFO  com.amazon.pages.HomePage - Searching for product: wireless mouse
+2026-02-13 16:39:43.584 [main] INFO  com.amazon.pages.HomePage - Search submitted using role-based selectors
+2026-02-13 16:39:47.771 [main] INFO  com.amazon.pages.HomePage - Search submitted successfully
+2026-02-13 16:39:48.948 [main] DEBUG com.amazon.pages.SearchResultsPage - Waiting for selector: div.s-main-slot with timeout: 15000ms
+2026-02-13 16:39:49.053 [main] INFO  com.amazon.pages.SearchResultsPage - Search results displayed: true (count: 22)
+2026-02-13 16:39:49.068 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Search results count: 22
+2026-02-13 16:39:49.069 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Clicking on product - wireless mouse
+2026-02-13 16:39:49.069 [main] INFO  com.amazon.pages.SearchResultsPage - Clicking on product in same tab: wireless mouse
+2026-02-13 16:39:53.555 [main] DEBUG com.amazon.pages.SearchResultsPage - Role-based link click failed, trying partial match
+2026-02-13 16:39:53.555 [main] INFO  com.amazon.pages.SearchResultsPage - Getting product URL for: wireless mouse
+2026-02-13 16:39:55.579 [main] INFO  com.amazon.pages.SearchResultsPage - Total search results found: 22
+2026-02-13 16:39:55.590 [main] DEBUG com.amazon.pages.SearchResultsPage - Result 0: Logitech MX Master 2S Bluetooth Edition Wireless Mouse, Multi-Surface, Hyper-Fast Scrolling, Ergonomic, Rechargeable, Connects Up to 3 Mac/PC Computers
+2026-02-13 16:39:55.591 [main] INFO  com.amazon.pages.SearchResultsPage - Found matching product at index 0: Logitech MX Master 2S Bluetooth Edition Wireless Mouse, Multi-Surface, Hyper-Fast Scrolling, Ergonomic, Rechargeable, Connects Up to 3 Mac/PC Computers
+2026-02-13 16:39:55.614 [main] DEBUG com.amazon.pages.SearchResultsPage - Found link using 'a.a-link-normal.s-underline-text' selector
+2026-02-13 16:39:55.624 [main] INFO  com.amazon.pages.SearchResultsPage - Product URL: #
+2026-02-13 16:39:55.624 [main] INFO  com.amazon.pages.SearchResultsPage - Navigating to product URL in same tab: #
+2026-02-13 16:39:55.744 [main] INFO  com.amazon.stepdefinitions.Hooks - Finishing Scenario: Add to cart - positive from JSON test data - Status: FAILED
+2026-02-13 16:39:55.744 [main] ERROR com.amazon.stepdefinitions.Hooks - Scenario FAILED: Add to cart - positive from JSON test data
+2026-02-13 16:39:59.720 [main] INFO  com.amazon.stepdefinitions.Hooks - Failure screenshot captured
+2026-02-13 16:39:59.720 [main] INFO  com.amazon.factory.PlaywrightFactory - Tearing down Playwright resources
+2026-02-13 16:40:00.880 [main] INFO  com.amazon.factory.PlaywrightFactory - Playwright resources closed successfully
+2026-02-13 16:40:00.881 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:40:00.882 [main] INFO  com.amazon.stepdefinitions.Hooks - Scenario Completed: Add to cart - positive from JSON test data
+2026-02-13 16:40:00.882 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:40:00.911 [main] WARN  com.amazon.plugins.FlakyAndRcaPlugin - Scenario failed (will be tagged as flaky if still failing after retries): Add to cart - positive from JSON test data
+2026-02-13 16:40:00.954 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:40:00.955 [main] INFO  com.amazon.stepdefinitions.Hooks - Starting Scenario: Search with non-existent product - no results
+2026-02-13 16:40:00.959 [main] INFO  com.amazon.stepdefinitions.Hooks - Tags: [@cart, @negative, @addToCart, @noResults]
+2026-02-13 16:40:00.959 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:40:00.960 [main] INFO  com.amazon.factory.PlaywrightFactory - Initializing Playwright with browser: chromium (headless: false)
+2026-02-13 16:40:03.216 [main] INFO  com.amazon.factory.PlaywrightFactory - Launching Chromium browser
+2026-02-13 16:40:04.509 [main] INFO  com.amazon.factory.PlaywrightFactory - Browser initialized successfully with viewport: 1920x1080
+2026-02-13 16:40:04.526 [main] INFO  com.amazon.stepdefinitions.Hooks - Browser initialized for scenario: Search with non-existent product - no results
+2026-02-13 16:40:04.566 [main] INFO  com.amazon.config.TestDataReader - Loading test data from path: testdata/add-to-cart-data.json (CI: false)
+2026-02-13 16:40:04.569 [main] INFO  com.amazon.config.TestDataReader - Loaded test data from classpath: testdata/add-to-cart-data.json
+2026-02-13 16:40:04.575 [main] INFO  com.amazon.pages.HomePage - Navigating to: https://www.amazon.in
+2026-02-13 16:40:07.394 [main] INFO  com.amazon.pages.HomePage - Navigated to Amazon.in home page
+2026-02-13 16:40:07.394 [main] DEBUG com.amazon.pages.HomePage - Waiting for selector: #twotabsearchtextbox with timeout: 10000ms
+2026-02-13 16:40:09.443 [main] INFO  com.amazon.pages.HomePage - Home page displayed: true
+2026-02-13 16:40:09.443 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Successfully navigated to Amazon.in home page
+2026-02-13 16:40:09.446 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Searching for product - xyznonexistentproduct12345
+2026-02-13 16:40:09.447 [main] INFO  com.amazon.pages.HomePage - Searching for product: xyznonexistentproduct12345
+2026-02-13 16:40:14.226 [main] INFO  com.amazon.pages.HomePage - Search submitted using role-based selectors
+2026-02-13 16:40:17.076 [main] INFO  com.amazon.pages.HomePage - Search submitted successfully
+2026-02-13 16:40:22.555 [main] INFO  com.amazon.stepdefinitions.Hooks - Finishing Scenario: Search with non-existent product - no results - Status: FAILED
+2026-02-13 16:40:22.559 [main] ERROR com.amazon.stepdefinitions.Hooks - Scenario FAILED: Search with non-existent product - no results
+2026-02-13 16:40:24.290 [main] INFO  com.amazon.stepdefinitions.Hooks - Failure screenshot captured
+2026-02-13 16:40:24.292 [main] INFO  com.amazon.factory.PlaywrightFactory - Tearing down Playwright resources
+2026-02-13 16:40:25.003 [main] INFO  com.amazon.factory.PlaywrightFactory - Playwright resources closed successfully
+2026-02-13 16:40:25.004 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:40:25.004 [main] INFO  com.amazon.stepdefinitions.Hooks - Scenario Completed: Search with non-existent product - no results
+2026-02-13 16:40:25.006 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:40:25.019 [main] WARN  com.amazon.plugins.FlakyAndRcaPlugin - Scenario failed (will be tagged as flaky if still failing after retries): Search with non-existent product - no results
+2026-02-13 16:40:25.094 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:40:25.098 [main] INFO  com.amazon.stepdefinitions.Hooks - Starting Scenario: Search with empty or whitespace - error or no search
+2026-02-13 16:40:25.102 [main] INFO  com.amazon.stepdefinitions.Hooks - Tags: [@cart, @negative, @addToCart, @emptySearch]
+2026-02-13 16:40:25.103 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:40:25.103 [main] INFO  com.amazon.factory.PlaywrightFactory - Initializing Playwright with browser: chromium (headless: false)
+2026-02-13 16:40:27.179 [main] INFO  com.amazon.factory.PlaywrightFactory - Launching Chromium browser
+2026-02-13 16:40:28.277 [main] INFO  com.amazon.factory.PlaywrightFactory - Browser initialized successfully with viewport: 1920x1080
+2026-02-13 16:40:28.280 [main] INFO  com.amazon.stepdefinitions.Hooks - Browser initialized for scenario: Search with empty or whitespace - error or no search
+2026-02-13 16:40:28.301 [main] INFO  com.amazon.config.TestDataReader - Loading test data from path: testdata/add-to-cart-data.json (CI: false)
+2026-02-13 16:40:28.309 [main] INFO  com.amazon.config.TestDataReader - Loaded test data from classpath: testdata/add-to-cart-data.json
+2026-02-13 16:40:28.325 [main] INFO  com.amazon.pages.HomePage - Navigating to: https://www.amazon.in
+2026-02-13 16:40:29.613 [main] INFO  com.amazon.pages.HomePage - Navigated to Amazon.in home page
+2026-02-13 16:40:29.615 [main] DEBUG com.amazon.pages.HomePage - Waiting for selector: #twotabsearchtextbox with timeout: 10000ms
+2026-02-13 16:40:30.839 [main] INFO  com.amazon.pages.HomePage - Home page displayed: true
+2026-02-13 16:40:30.839 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Successfully navigated to Amazon.in home page
+2026-02-13 16:40:30.842 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Searching for product -    
+2026-02-13 16:40:30.843 [main] INFO  com.amazon.pages.HomePage - Searching for product:    
+2026-02-13 16:40:35.310 [main] INFO  com.amazon.pages.HomePage - Search submitted using role-based selectors
+2026-02-13 16:40:36.935 [main] INFO  com.amazon.pages.HomePage - Search submitted successfully
+2026-02-13 16:40:41.335 [main] INFO  com.amazon.stepdefinitions.Hooks - Finishing Scenario: Search with empty or whitespace - error or no search - Status: PASSED
+2026-02-13 16:40:41.343 [main] INFO  com.amazon.factory.PlaywrightFactory - Tearing down Playwright resources
+2026-02-13 16:40:42.247 [main] INFO  com.amazon.factory.PlaywrightFactory - Playwright resources closed successfully
+2026-02-13 16:40:42.247 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:40:42.247 [main] INFO  com.amazon.stepdefinitions.Hooks - Scenario Completed: Search with empty or whitespace - error or no search
+2026-02-13 16:40:42.247 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:40:42.277 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:40:42.277 [main] INFO  com.amazon.stepdefinitions.Hooks - Starting Scenario: Cart count mismatch should fail (negative assertion)
+2026-02-13 16:40:42.277 [main] INFO  com.amazon.stepdefinitions.Hooks - Tags: [@cart, @negative, @addToCart, @cartCountMismatch]
+2026-02-13 16:40:42.277 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:40:42.279 [main] INFO  com.amazon.factory.PlaywrightFactory - Initializing Playwright with browser: chromium (headless: false)
+2026-02-13 16:40:44.135 [main] INFO  com.amazon.factory.PlaywrightFactory - Launching Chromium browser
+2026-02-13 16:40:45.769 [main] INFO  com.amazon.factory.PlaywrightFactory - Browser initialized successfully with viewport: 1920x1080
+2026-02-13 16:40:45.776 [main] INFO  com.amazon.stepdefinitions.Hooks - Browser initialized for scenario: Cart count mismatch should fail (negative assertion)
+2026-02-13 16:40:45.792 [main] INFO  com.amazon.config.TestDataReader - Loading test data from path: testdata/add-to-cart-data.json (CI: false)
+2026-02-13 16:40:45.797 [main] INFO  com.amazon.config.TestDataReader - Loaded test data from classpath: testdata/add-to-cart-data.json
+2026-02-13 16:40:45.812 [main] INFO  com.amazon.pages.HomePage - Navigating to: https://www.amazon.in
+2026-02-13 16:40:47.468 [main] INFO  com.amazon.pages.HomePage - Navigated to Amazon.in home page
+2026-02-13 16:40:47.469 [main] DEBUG com.amazon.pages.HomePage - Waiting for selector: #twotabsearchtextbox with timeout: 10000ms
+2026-02-13 16:40:48.388 [main] INFO  com.amazon.pages.HomePage - Home page displayed: true
+2026-02-13 16:40:48.389 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Successfully navigated to Amazon.in home page
+2026-02-13 16:40:48.399 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Searching for product - iPhone 17 Pro Max 2 TB
+2026-02-13 16:40:48.399 [main] INFO  com.amazon.pages.HomePage - Searching for product: iPhone 17 Pro Max 2 TB
+2026-02-13 16:40:51.632 [main] INFO  com.amazon.pages.HomePage - Search submitted using role-based selectors
+2026-02-13 16:40:53.453 [main] INFO  com.amazon.pages.HomePage - Search submitted successfully
+2026-02-13 16:40:54.259 [main] DEBUG com.amazon.pages.SearchResultsPage - Waiting for selector: div.s-main-slot with timeout: 15000ms
+2026-02-13 16:40:54.329 [main] INFO  com.amazon.pages.SearchResultsPage - Search results displayed: true (count: 16)
+2026-02-13 16:40:54.345 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Search results count: 16
+2026-02-13 16:40:54.348 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Clicking on product - iPhone 17 Pro Max
+2026-02-13 16:40:54.348 [main] INFO  com.amazon.pages.SearchResultsPage - Clicking on product in same tab: iPhone 17 Pro Max
+2026-02-13 16:40:57.067 [main] DEBUG com.amazon.pages.SearchResultsPage - Role-based link click failed, trying partial match
+2026-02-13 16:40:57.067 [main] INFO  com.amazon.pages.SearchResultsPage - Getting product URL for: iPhone 17 Pro Max
+2026-02-13 16:40:59.086 [main] INFO  com.amazon.pages.SearchResultsPage - Total search results found: 16
+2026-02-13 16:40:59.095 [main] DEBUG com.amazon.pages.SearchResultsPage - Result 0: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:40:59.096 [main] INFO  com.amazon.pages.SearchResultsPage - Found matching product at index 0: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:40:59.110 [main] DEBUG com.amazon.pages.SearchResultsPage - Found link using 'a.a-link-normal.s-underline-text' selector
+2026-02-13 16:40:59.117 [main] INFO  com.amazon.pages.SearchResultsPage - Product URL: https://www.amazon.in/iPhone-17-Pro-Max-Promotion/dp/B0FQFVX9ZZ/ref=sr_1_1?crid=3Q4CGLGT271V6&dib=eyJ2IjoiMSJ9.NFJLUmDgx_RkdWUjiD8zQy-jiplTARIjLnubLThpbErKtyL7RCIoBdKibKH-h8AJFPSoQ9DZioBd0p3_HOvoRDBji4S6N35s2GxEppijsWDSOtTiA7LiAom6dSjrlfPfHb6JKQMmX01HmTABf-Gqqzc6qrgR307ywD5S-QmHUazAo2EDrFVV1V2_NrPrT5AZGIpeTeyWTTZDs27YI0KEzJwb7b0JNqixuk9bimiU8H0.VcXAq2fT9FKFA7FBAMnlZHYBhXHxPHFU6ev5zPq7l9k&dib_tag=se&keywords=iPhone+17+Pro+Max+2+TB&qid=1770981049&sprefix=iphone+17+pro+max+2+tb%2Caps%2C616&sr=8-1#customerReviews
+2026-02-13 16:40:59.117 [main] INFO  com.amazon.pages.SearchResultsPage - Navigating to product URL in same tab: https://www.amazon.in/iPhone-17-Pro-Max-Promotion/dp/B0FQFVX9ZZ/ref=sr_1_1?crid=3Q4CGLGT271V6&dib=eyJ2IjoiMSJ9.NFJLUmDgx_RkdWUjiD8zQy-jiplTARIjLnubLThpbErKtyL7RCIoBdKibKH-h8AJFPSoQ9DZioBd0p3_HOvoRDBji4S6N35s2GxEppijsWDSOtTiA7LiAom6dSjrlfPfHb6JKQMmX01HmTABf-Gqqzc6qrgR307ywD5S-QmHUazAo2EDrFVV1V2_NrPrT5AZGIpeTeyWTTZDs27YI0KEzJwb7b0JNqixuk9bimiU8H0.VcXAq2fT9FKFA7FBAMnlZHYBhXHxPHFU6ev5zPq7l9k&dib_tag=se&keywords=iPhone+17+Pro+Max+2+TB&qid=1770981049&sprefix=iphone+17+pro+max+2+tb%2Caps%2C616&sr=8-1#customerReviews
+2026-02-13 16:41:08.413 [main] INFO  com.amazon.pages.SearchResultsPage - Product page loaded in same tab successfully
+2026-02-13 16:41:10.421 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found 3 frames on the page
+2026-02-13 16:41:10.421 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found relevant iframe: 
+2026-02-13 16:41:10.421 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found relevant iframe: 
+2026-02-13 16:41:10.421 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found relevant iframe: 
+2026-02-13 16:41:10.421 [main] DEBUG com.amazon.pages.ProductPage - Waiting for selector: span#productTitle with timeout: 10000ms
+2026-02-13 16:41:10.513 [main] INFO  com.amazon.pages.ProductPage - Product title: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:41:10.513 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Product page loaded in same tab. Title: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:41:11.302 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Clicking Add to Cart button
+2026-02-13 16:41:11.303 [main] INFO  com.amazon.pages.ProductPage - Clicking Add to Cart button
+2026-02-13 16:41:14.481 [main] DEBUG com.amazon.pages.ProductPage - Scroll result: scrolled
+2026-02-13 16:41:15.997 [main] INFO  com.amazon.pages.ProductPage - Found 3 frames on product page
+2026-02-13 16:41:18.113 [main] INFO  com.amazon.pages.ProductPage - Attempting Add to Cart via role-based selector
+2026-02-13 16:41:19.092 [main] INFO  com.amazon.pages.ProductPage - Add to Cart clicked successfully using role-based selector
+2026-02-13 16:41:24.832 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Verifying product is added to cart
+2026-02-13 16:41:29.871 [main] INFO  com.amazon.pages.ProductPage - Cart confirmation message found
+2026-02-13 16:41:29.872 [main] INFO  com.amazon.pages.ProductPage - Item added to cart confirmation: true
+2026-02-13 16:41:30.379 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Product successfully added to cart!
+2026-02-13 16:41:30.386 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Verifying cart count is not 99
+2026-02-13 16:41:30.416 [main] INFO  com.amazon.stepdefinitions.Hooks - Finishing Scenario: Cart count mismatch should fail (negative assertion) - Status: PASSED
+2026-02-13 16:41:30.417 [main] INFO  com.amazon.factory.PlaywrightFactory - Tearing down Playwright resources
+2026-02-13 16:41:31.037 [main] INFO  com.amazon.factory.PlaywrightFactory - Playwright resources closed successfully
+2026-02-13 16:41:31.038 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:41:31.039 [main] INFO  com.amazon.stepdefinitions.Hooks - Scenario Completed: Cart count mismatch should fail (negative assertion)
+2026-02-13 16:41:31.039 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:41:31.059 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:41:31.059 [main] INFO  com.amazon.stepdefinitions.Hooks - Starting Scenario: No results - negative from JSON test data
+2026-02-13 16:41:31.059 [main] INFO  com.amazon.stepdefinitions.Hooks - Tags: [@cart, @negative, @addToCart, @dataDriven, @json]
+2026-02-13 16:41:31.059 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:41:31.059 [main] INFO  com.amazon.factory.PlaywrightFactory - Initializing Playwright with browser: chromium (headless: false)
+2026-02-13 16:41:33.053 [main] INFO  com.amazon.factory.PlaywrightFactory - Launching Chromium browser
+2026-02-13 16:41:34.525 [main] INFO  com.amazon.factory.PlaywrightFactory - Browser initialized successfully with viewport: 1920x1080
+2026-02-13 16:41:34.550 [main] INFO  com.amazon.stepdefinitions.Hooks - Browser initialized for scenario: No results - negative from JSON test data
+2026-02-13 16:41:34.615 [main] INFO  com.amazon.config.TestDataReader - Loading test data from path: testdata/add-to-cart-data.json (CI: false)
+2026-02-13 16:41:34.618 [main] INFO  com.amazon.config.TestDataReader - Loaded test data from classpath: testdata/add-to-cart-data.json
+2026-02-13 16:41:34.627 [main] INFO  com.amazon.pages.HomePage - Navigating to: https://www.amazon.in
+2026-02-13 16:41:38.322 [main] INFO  com.amazon.pages.HomePage - Navigated to Amazon.in home page
+2026-02-13 16:41:38.323 [main] DEBUG com.amazon.pages.HomePage - Waiting for selector: #twotabsearchtextbox with timeout: 10000ms
+2026-02-13 16:41:39.661 [main] INFO  com.amazon.pages.HomePage - Home page displayed: true
+2026-02-13 16:41:39.662 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Successfully navigated to Amazon.in home page
+2026-02-13 16:41:39.667 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Loading test scenario: negative_1 from category: negative
+2026-02-13 16:41:39.675 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Searching for product - xyznonexistentproduct12345
+2026-02-13 16:41:39.677 [main] INFO  com.amazon.pages.HomePage - Searching for product: xyznonexistentproduct12345
+2026-02-13 16:41:44.478 [main] INFO  com.amazon.pages.HomePage - Search submitted using role-based selectors
+2026-02-13 16:41:47.399 [main] INFO  com.amazon.pages.HomePage - Search submitted successfully
+2026-02-13 16:41:51.802 [main] INFO  com.amazon.stepdefinitions.Hooks - Finishing Scenario: No results - negative from JSON test data - Status: FAILED
+2026-02-13 16:41:51.802 [main] ERROR com.amazon.stepdefinitions.Hooks - Scenario FAILED: No results - negative from JSON test data
+2026-02-13 16:41:53.300 [main] INFO  com.amazon.stepdefinitions.Hooks - Failure screenshot captured
+2026-02-13 16:41:53.300 [main] INFO  com.amazon.factory.PlaywrightFactory - Tearing down Playwright resources
+2026-02-13 16:41:53.980 [main] INFO  com.amazon.factory.PlaywrightFactory - Playwright resources closed successfully
+2026-02-13 16:41:53.980 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:41:53.980 [main] INFO  com.amazon.stepdefinitions.Hooks - Scenario Completed: No results - negative from JSON test data
+2026-02-13 16:41:53.980 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:41:53.999 [main] WARN  com.amazon.plugins.FlakyAndRcaPlugin - Scenario failed (will be tagged as flaky if still failing after retries): No results - negative from JSON test data
+2026-02-13 16:41:54.037 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:41:54.038 [main] INFO  com.amazon.stepdefinitions.Hooks - Starting Scenario: No results - negative from JSON test data
+2026-02-13 16:41:54.038 [main] INFO  com.amazon.stepdefinitions.Hooks - Tags: [@cart, @negative, @addToCart, @dataDriven, @json]
+2026-02-13 16:41:54.038 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:41:54.038 [main] INFO  com.amazon.factory.PlaywrightFactory - Initializing Playwright with browser: chromium (headless: false)
+2026-02-13 16:41:55.879 [main] INFO  com.amazon.factory.PlaywrightFactory - Launching Chromium browser
+2026-02-13 16:41:57.051 [main] INFO  com.amazon.factory.PlaywrightFactory - Browser initialized successfully with viewport: 1920x1080
+2026-02-13 16:41:57.055 [main] INFO  com.amazon.stepdefinitions.Hooks - Browser initialized for scenario: No results - negative from JSON test data
+2026-02-13 16:41:57.061 [main] INFO  com.amazon.config.TestDataReader - Loading test data from path: testdata/add-to-cart-data.json (CI: false)
+2026-02-13 16:41:57.066 [main] INFO  com.amazon.config.TestDataReader - Loaded test data from classpath: testdata/add-to-cart-data.json
+2026-02-13 16:41:57.068 [main] INFO  com.amazon.pages.HomePage - Navigating to: https://www.amazon.in
+2026-02-13 16:41:58.313 [main] INFO  com.amazon.pages.HomePage - Navigated to Amazon.in home page
+2026-02-13 16:41:58.313 [main] DEBUG com.amazon.pages.HomePage - Waiting for selector: #twotabsearchtextbox with timeout: 10000ms
+2026-02-13 16:42:00.368 [main] INFO  com.amazon.pages.HomePage - Home page displayed: true
+2026-02-13 16:42:00.369 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Successfully navigated to Amazon.in home page
+2026-02-13 16:42:00.375 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Loading test scenario: negative_2 from category: negative
+2026-02-13 16:42:00.383 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Searching for product - 
+2026-02-13 16:42:00.383 [main] INFO  com.amazon.pages.HomePage - Searching for product: 
+2026-02-13 16:42:04.200 [main] INFO  com.amazon.pages.HomePage - Search submitted using role-based selectors
+2026-02-13 16:42:06.133 [main] INFO  com.amazon.pages.HomePage - Search submitted successfully
+2026-02-13 16:42:10.542 [main] INFO  com.amazon.stepdefinitions.Hooks - Finishing Scenario: No results - negative from JSON test data - Status: PASSED
+2026-02-13 16:42:10.542 [main] INFO  com.amazon.factory.PlaywrightFactory - Tearing down Playwright resources
+2026-02-13 16:42:11.230 [main] INFO  com.amazon.factory.PlaywrightFactory - Playwright resources closed successfully
+2026-02-13 16:42:11.230 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:42:11.230 [main] INFO  com.amazon.stepdefinitions.Hooks - Scenario Completed: No results - negative from JSON test data
+2026-02-13 16:42:11.230 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:42:11.273 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:42:11.273 [main] INFO  com.amazon.stepdefinitions.Hooks - Starting Scenario: Add to cart with long search term (edge)
+2026-02-13 16:42:11.273 [main] INFO  com.amazon.stepdefinitions.Hooks - Tags: [@cart, @edge, @addToCart, @longSearchTerm]
+2026-02-13 16:42:11.273 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:42:11.273 [main] INFO  com.amazon.factory.PlaywrightFactory - Initializing Playwright with browser: chromium (headless: false)
+2026-02-13 16:42:13.138 [main] INFO  com.amazon.factory.PlaywrightFactory - Launching Chromium browser
+2026-02-13 16:42:14.314 [main] INFO  com.amazon.factory.PlaywrightFactory - Browser initialized successfully with viewport: 1920x1080
+2026-02-13 16:42:14.335 [main] INFO  com.amazon.stepdefinitions.Hooks - Browser initialized for scenario: Add to cart with long search term (edge)
+2026-02-13 16:42:14.359 [main] INFO  com.amazon.config.TestDataReader - Loading test data from path: testdata/add-to-cart-data.json (CI: false)
+2026-02-13 16:42:14.363 [main] INFO  com.amazon.config.TestDataReader - Loaded test data from classpath: testdata/add-to-cart-data.json
+2026-02-13 16:42:14.374 [main] INFO  com.amazon.pages.HomePage - Navigating to: https://www.amazon.in
+2026-02-13 16:42:18.350 [main] INFO  com.amazon.pages.HomePage - Navigated to Amazon.in home page
+2026-02-13 16:42:18.350 [main] DEBUG com.amazon.pages.HomePage - Waiting for selector: #twotabsearchtextbox with timeout: 10000ms
+2026-02-13 16:42:20.021 [main] INFO  com.amazon.pages.HomePage - Home page displayed: true
+2026-02-13 16:42:20.021 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Successfully navigated to Amazon.in home page
+2026-02-13 16:42:20.054 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Searching for product - iPhone 17 Pro Max 2 TB
+2026-02-13 16:42:20.058 [main] INFO  com.amazon.pages.HomePage - Searching for product: iPhone 17 Pro Max 2 TB
+2026-02-13 16:42:23.786 [main] INFO  com.amazon.pages.HomePage - Search submitted using role-based selectors
+2026-02-13 16:42:26.017 [main] INFO  com.amazon.pages.HomePage - Search submitted successfully
+2026-02-13 16:42:27.193 [main] DEBUG com.amazon.pages.SearchResultsPage - Waiting for selector: div.s-main-slot with timeout: 15000ms
+2026-02-13 16:42:27.272 [main] INFO  com.amazon.pages.SearchResultsPage - Search results displayed: true (count: 16)
+2026-02-13 16:42:27.287 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Search results count: 16
+2026-02-13 16:42:27.293 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Clicking on product - iPhone 17 Pro Max
+2026-02-13 16:42:27.293 [main] INFO  com.amazon.pages.SearchResultsPage - Clicking on product in same tab: iPhone 17 Pro Max
+2026-02-13 16:42:30.373 [main] DEBUG com.amazon.pages.SearchResultsPage - Role-based link click failed, trying partial match
+2026-02-13 16:42:30.373 [main] INFO  com.amazon.pages.SearchResultsPage - Getting product URL for: iPhone 17 Pro Max
+2026-02-13 16:42:32.414 [main] INFO  com.amazon.pages.SearchResultsPage - Total search results found: 16
+2026-02-13 16:42:32.446 [main] DEBUG com.amazon.pages.SearchResultsPage - Result 0: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:42:32.446 [main] INFO  com.amazon.pages.SearchResultsPage - Found matching product at index 0: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:42:32.485 [main] DEBUG com.amazon.pages.SearchResultsPage - Found link using 'a.a-link-normal.s-underline-text' selector
+2026-02-13 16:42:32.505 [main] INFO  com.amazon.pages.SearchResultsPage - Product URL: https://www.amazon.in/iPhone-17-Pro-Max-Promotion/dp/B0FQFVX9ZZ/ref=sr_1_1?crid=35EFCSGQPWJTS&dib=eyJ2IjoiMSJ9.NFJLUmDgx_RkdWUjiD8zQy-jiplTARIjLnubLThpbErKtyL7RCIoBdKibKH-h8AJFPSoQ9DZioBd0p3_HOvoRDBji4S6N35s2GxEppijsWDSOtTiA7LiAom6dSjrlfPfHb6JKQMmX01HmTABf-Gqqzc6qrgR307ywD5S-QmHUazAo2EDrFVV1V2_NrPrT5AZbpjcQtmIf1vfC9dcm51_U9GXXCJKIUSv9z70v958Ing.0wRltkat9q3Ji4FIIOJAn2mzG9_jQyiDSfejddBM5BE&dib_tag=se&keywords=iPhone+17+Pro+Max+2+TB&qid=1770981142&sprefix=%2Caps%2C465&sr=8-1#customerReviews
+2026-02-13 16:42:32.505 [main] INFO  com.amazon.pages.SearchResultsPage - Navigating to product URL in same tab: https://www.amazon.in/iPhone-17-Pro-Max-Promotion/dp/B0FQFVX9ZZ/ref=sr_1_1?crid=35EFCSGQPWJTS&dib=eyJ2IjoiMSJ9.NFJLUmDgx_RkdWUjiD8zQy-jiplTARIjLnubLThpbErKtyL7RCIoBdKibKH-h8AJFPSoQ9DZioBd0p3_HOvoRDBji4S6N35s2GxEppijsWDSOtTiA7LiAom6dSjrlfPfHb6JKQMmX01HmTABf-Gqqzc6qrgR307ywD5S-QmHUazAo2EDrFVV1V2_NrPrT5AZbpjcQtmIf1vfC9dcm51_U9GXXCJKIUSv9z70v958Ing.0wRltkat9q3Ji4FIIOJAn2mzG9_jQyiDSfejddBM5BE&dib_tag=se&keywords=iPhone+17+Pro+Max+2+TB&qid=1770981142&sprefix=%2Caps%2C465&sr=8-1#customerReviews
+2026-02-13 16:42:41.261 [main] INFO  com.amazon.pages.SearchResultsPage - Product page loaded in same tab successfully
+2026-02-13 16:42:43.271 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found 3 frames on the page
+2026-02-13 16:42:43.272 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found relevant iframe: 
+2026-02-13 16:42:43.272 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found relevant iframe: 
+2026-02-13 16:42:43.272 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found relevant iframe: 
+2026-02-13 16:42:43.272 [main] DEBUG com.amazon.pages.ProductPage - Waiting for selector: span#productTitle with timeout: 10000ms
+2026-02-13 16:42:43.382 [main] INFO  com.amazon.pages.ProductPage - Product title: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:42:43.382 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Product page loaded in same tab. Title: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:42:44.459 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Clicking Add to Cart button
+2026-02-13 16:42:44.459 [main] INFO  com.amazon.pages.ProductPage - Clicking Add to Cart button
+2026-02-13 16:42:47.643 [main] DEBUG com.amazon.pages.ProductPage - Scroll result: scrolled
+2026-02-13 16:42:49.154 [main] INFO  com.amazon.pages.ProductPage - Found 3 frames on product page
+2026-02-13 16:42:51.220 [main] INFO  com.amazon.pages.ProductPage - Attempting Add to Cart via role-based selector
+2026-02-13 16:42:52.541 [main] INFO  com.amazon.pages.ProductPage - Add to Cart clicked successfully using role-based selector
+2026-02-13 16:42:58.187 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Verifying product is added to cart
+2026-02-13 16:43:03.223 [main] INFO  com.amazon.pages.ProductPage - Cart confirmation message found
+2026-02-13 16:43:03.224 [main] INFO  com.amazon.pages.ProductPage - Item added to cart confirmation: true
+2026-02-13 16:43:03.906 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Product successfully added to cart!
+2026-02-13 16:43:03.909 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Verifying cart count is 1
+2026-02-13 16:43:03.937 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Cart count from badge: 1
+2026-02-13 16:43:03.938 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Cart count verified: 1
+2026-02-13 16:43:03.944 [main] INFO  com.amazon.stepdefinitions.Hooks - Finishing Scenario: Add to cart with long search term (edge) - Status: PASSED
+2026-02-13 16:43:03.948 [main] INFO  com.amazon.factory.PlaywrightFactory - Tearing down Playwright resources
+2026-02-13 16:43:04.746 [main] INFO  com.amazon.factory.PlaywrightFactory - Playwright resources closed successfully
+2026-02-13 16:43:04.746 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:43:04.746 [main] INFO  com.amazon.stepdefinitions.Hooks - Scenario Completed: Add to cart with long search term (edge)
+2026-02-13 16:43:04.746 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:43:04.769 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:43:04.769 [main] INFO  com.amazon.stepdefinitions.Hooks - Starting Scenario: Add to cart with short search term (edge)
+2026-02-13 16:43:04.769 [main] INFO  com.amazon.stepdefinitions.Hooks - Tags: [@cart, @edge, @addToCart, @shortSearchTerm]
+2026-02-13 16:43:04.769 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:43:04.769 [main] INFO  com.amazon.factory.PlaywrightFactory - Initializing Playwright with browser: chromium (headless: false)
+2026-02-13 16:43:06.637 [main] INFO  com.amazon.factory.PlaywrightFactory - Launching Chromium browser
+2026-02-13 16:43:07.822 [main] INFO  com.amazon.factory.PlaywrightFactory - Browser initialized successfully with viewport: 1920x1080
+2026-02-13 16:43:07.822 [main] INFO  com.amazon.stepdefinitions.Hooks - Browser initialized for scenario: Add to cart with short search term (edge)
+2026-02-13 16:43:07.834 [main] INFO  com.amazon.config.TestDataReader - Loading test data from path: testdata/add-to-cart-data.json (CI: false)
+2026-02-13 16:43:07.840 [main] INFO  com.amazon.config.TestDataReader - Loaded test data from classpath: testdata/add-to-cart-data.json
+2026-02-13 16:43:07.842 [main] INFO  com.amazon.pages.HomePage - Navigating to: https://www.amazon.in
+2026-02-13 16:43:11.446 [main] INFO  com.amazon.pages.HomePage - Navigated to Amazon.in home page
+2026-02-13 16:43:11.446 [main] DEBUG com.amazon.pages.HomePage - Waiting for selector: #twotabsearchtextbox with timeout: 10000ms
+2026-02-13 16:43:12.218 [main] INFO  com.amazon.pages.HomePage - Home page displayed: true
+2026-02-13 16:43:12.218 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Successfully navigated to Amazon.in home page
+2026-02-13 16:43:12.224 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Searching for product - mouse
+2026-02-13 16:43:12.224 [main] INFO  com.amazon.pages.HomePage - Searching for product: mouse
+2026-02-13 16:43:13.932 [main] INFO  com.amazon.pages.HomePage - Search submitted using role-based selectors
+2026-02-13 16:43:19.310 [main] INFO  com.amazon.pages.HomePage - Search submitted successfully
+2026-02-13 16:43:21.283 [main] DEBUG com.amazon.pages.SearchResultsPage - Waiting for selector: div.s-main-slot with timeout: 15000ms
+2026-02-13 16:43:21.404 [main] INFO  com.amazon.pages.SearchResultsPage - Search results displayed: true (count: 22)
+2026-02-13 16:43:21.414 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Search results count: 22
+2026-02-13 16:43:21.423 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Clicking on product - mouse
+2026-02-13 16:43:21.423 [main] INFO  com.amazon.pages.SearchResultsPage - Clicking on product in same tab: mouse
+2026-02-13 16:43:27.270 [main] DEBUG com.amazon.pages.SearchResultsPage - Role-based link click failed, trying partial match
+2026-02-13 16:43:27.270 [main] INFO  com.amazon.pages.SearchResultsPage - Getting product URL for: mouse
+2026-02-13 16:43:29.287 [main] INFO  com.amazon.pages.SearchResultsPage - Total search results found: 22
+2026-02-13 16:43:29.296 [main] DEBUG com.amazon.pages.SearchResultsPage - Result 0: Logitech MX Master 2S Bluetooth Edition Wireless Mouse, Multi-Surface, Hyper-Fast Scrolling, Ergonomic, Rechargeable, Connects Up to 3 Mac/PC Computers
+2026-02-13 16:43:29.296 [main] INFO  com.amazon.pages.SearchResultsPage - Found matching product at index 0: Logitech MX Master 2S Bluetooth Edition Wireless Mouse, Multi-Surface, Hyper-Fast Scrolling, Ergonomic, Rechargeable, Connects Up to 3 Mac/PC Computers
+2026-02-13 16:43:29.316 [main] DEBUG com.amazon.pages.SearchResultsPage - Found link using 'a.a-link-normal.s-underline-text' selector
+2026-02-13 16:43:29.321 [main] INFO  com.amazon.pages.SearchResultsPage - Product URL: #
+2026-02-13 16:43:29.321 [main] INFO  com.amazon.pages.SearchResultsPage - Navigating to product URL in same tab: #
+2026-02-13 16:43:29.456 [main] INFO  com.amazon.stepdefinitions.Hooks - Finishing Scenario: Add to cart with short search term (edge) - Status: FAILED
+2026-02-13 16:43:29.457 [main] ERROR com.amazon.stepdefinitions.Hooks - Scenario FAILED: Add to cart with short search term (edge)
+2026-02-13 16:43:34.177 [main] INFO  com.amazon.stepdefinitions.Hooks - Failure screenshot captured
+2026-02-13 16:43:34.177 [main] INFO  com.amazon.factory.PlaywrightFactory - Tearing down Playwright resources
+2026-02-13 16:43:35.215 [main] INFO  com.amazon.factory.PlaywrightFactory - Playwright resources closed successfully
+2026-02-13 16:43:35.215 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:43:35.216 [main] INFO  com.amazon.stepdefinitions.Hooks - Scenario Completed: Add to cart with short search term (edge)
+2026-02-13 16:43:35.216 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:43:35.230 [main] WARN  com.amazon.plugins.FlakyAndRcaPlugin - Scenario failed (will be tagged as flaky if still failing after retries): Add to cart with short search term (edge)
+2026-02-13 16:43:35.290 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:43:35.290 [main] INFO  com.amazon.stepdefinitions.Hooks - Starting Scenario: Add to cart - edge from JSON test data
+2026-02-13 16:43:35.291 [main] INFO  com.amazon.stepdefinitions.Hooks - Tags: [@cart, @edge, @addToCart, @dataDriven, @json]
+2026-02-13 16:43:35.291 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:43:35.291 [main] INFO  com.amazon.factory.PlaywrightFactory - Initializing Playwright with browser: chromium (headless: false)
+2026-02-13 16:43:37.450 [main] INFO  com.amazon.factory.PlaywrightFactory - Launching Chromium browser
+2026-02-13 16:43:38.727 [main] INFO  com.amazon.factory.PlaywrightFactory - Browser initialized successfully with viewport: 1920x1080
+2026-02-13 16:43:38.728 [main] INFO  com.amazon.stepdefinitions.Hooks - Browser initialized for scenario: Add to cart - edge from JSON test data
+2026-02-13 16:43:38.791 [main] INFO  com.amazon.config.TestDataReader - Loading test data from path: testdata/add-to-cart-data.json (CI: false)
+2026-02-13 16:43:38.793 [main] INFO  com.amazon.config.TestDataReader - Loaded test data from classpath: testdata/add-to-cart-data.json
+2026-02-13 16:43:38.805 [main] INFO  com.amazon.pages.HomePage - Navigating to: https://www.amazon.in
+2026-02-13 16:43:40.071 [main] INFO  com.amazon.pages.HomePage - Navigated to Amazon.in home page
+2026-02-13 16:43:40.073 [main] DEBUG com.amazon.pages.HomePage - Waiting for selector: #twotabsearchtextbox with timeout: 10000ms
+2026-02-13 16:43:41.210 [main] INFO  com.amazon.pages.HomePage - Home page displayed: true
+2026-02-13 16:43:41.212 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Successfully navigated to Amazon.in home page
+2026-02-13 16:43:41.222 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Loading test scenario: edge_1 from category: edge
+2026-02-13 16:43:41.232 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Searching for product - iPhone 17 Pro Max 2 TB
+2026-02-13 16:43:41.233 [main] INFO  com.amazon.pages.HomePage - Searching for product: iPhone 17 Pro Max 2 TB
+2026-02-13 16:43:47.409 [main] INFO  com.amazon.pages.HomePage - Search submitted using role-based selectors
+2026-02-13 16:43:50.530 [main] INFO  com.amazon.pages.HomePage - Search submitted successfully
+2026-02-13 16:43:52.473 [main] DEBUG com.amazon.pages.SearchResultsPage - Waiting for selector: div.s-main-slot with timeout: 15000ms
+2026-02-13 16:43:52.735 [main] INFO  com.amazon.pages.SearchResultsPage - Search results displayed: true (count: 16)
+2026-02-13 16:43:52.762 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Search results count: 16
+2026-02-13 16:43:52.764 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Clicking on product - iPhone 17 Pro Max
+2026-02-13 16:43:52.765 [main] INFO  com.amazon.pages.SearchResultsPage - Clicking on product in same tab: iPhone 17 Pro Max
+2026-02-13 16:43:56.348 [main] DEBUG com.amazon.pages.SearchResultsPage - Role-based link click failed, trying partial match
+2026-02-13 16:43:56.349 [main] INFO  com.amazon.pages.SearchResultsPage - Getting product URL for: iPhone 17 Pro Max
+2026-02-13 16:43:58.382 [main] INFO  com.amazon.pages.SearchResultsPage - Total search results found: 16
+2026-02-13 16:43:58.405 [main] DEBUG com.amazon.pages.SearchResultsPage - Result 0: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:43:58.405 [main] INFO  com.amazon.pages.SearchResultsPage - Found matching product at index 0: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:43:58.442 [main] DEBUG com.amazon.pages.SearchResultsPage - Found link using 'a.a-link-normal.s-underline-text' selector
+2026-02-13 16:43:58.465 [main] INFO  com.amazon.pages.SearchResultsPage - Product URL: https://www.amazon.in/iPhone-17-Pro-Max-Promotion/dp/B0FQFVX9ZZ/ref=sr_1_1?crid=24NJYUQUAEH1P&dib=eyJ2IjoiMSJ9.NFJLUmDgx_RkdWUjiD8zQy-jiplTARIjLnubLThpbErKtyL7RCIoBdKibKH-h8AJFPSoQ9DZioBd0p3_HOvoRDBji4S6N35s2GxEppijsWDSOtTiA7LiAom6dSjrlfPfHb6JKQMmX01HmTABf-Gqqzc6qrgR307ywD5S-QmHUazAo2EDrFVV1V2_NrPrT5AZbpjcQtmIf1vfC9dcm51_U9GXXCJKIUSv9z70v958Ing.iYPCGUJjUOkqIm7kbWHWEh6ND7TaY7TIDegANfX2BwM&dib_tag=se&keywords=iPhone+17+Pro+Max+2+TB&qid=1770981225&sprefix=iphone+17+pro+max+2+tb%2Caps%2C796&sr=8-1#customerReviews
+2026-02-13 16:43:58.466 [main] INFO  com.amazon.pages.SearchResultsPage - Navigating to product URL in same tab: https://www.amazon.in/iPhone-17-Pro-Max-Promotion/dp/B0FQFVX9ZZ/ref=sr_1_1?crid=24NJYUQUAEH1P&dib=eyJ2IjoiMSJ9.NFJLUmDgx_RkdWUjiD8zQy-jiplTARIjLnubLThpbErKtyL7RCIoBdKibKH-h8AJFPSoQ9DZioBd0p3_HOvoRDBji4S6N35s2GxEppijsWDSOtTiA7LiAom6dSjrlfPfHb6JKQMmX01HmTABf-Gqqzc6qrgR307ywD5S-QmHUazAo2EDrFVV1V2_NrPrT5AZbpjcQtmIf1vfC9dcm51_U9GXXCJKIUSv9z70v958Ing.iYPCGUJjUOkqIm7kbWHWEh6ND7TaY7TIDegANfX2BwM&dib_tag=se&keywords=iPhone+17+Pro+Max+2+TB&qid=1770981225&sprefix=iphone+17+pro+max+2+tb%2Caps%2C796&sr=8-1#customerReviews
+2026-02-13 16:44:13.680 [main] INFO  com.amazon.pages.SearchResultsPage - Product page loaded in same tab successfully
+2026-02-13 16:44:15.683 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found 3 frames on the page
+2026-02-13 16:44:15.683 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found relevant iframe: 
+2026-02-13 16:44:15.683 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found relevant iframe: 
+2026-02-13 16:44:15.683 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found relevant iframe: 
+2026-02-13 16:44:15.683 [main] DEBUG com.amazon.pages.ProductPage - Waiting for selector: span#productTitle with timeout: 10000ms
+2026-02-13 16:44:15.781 [main] INFO  com.amazon.pages.ProductPage - Product title: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:44:15.781 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Product page loaded in same tab. Title: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:44:16.590 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Clicking Add to Cart button
+2026-02-13 16:44:16.590 [main] INFO  com.amazon.pages.ProductPage - Clicking Add to Cart button
+2026-02-13 16:44:19.774 [main] DEBUG com.amazon.pages.ProductPage - Scroll result: scrolled
+2026-02-13 16:44:21.285 [main] INFO  com.amazon.pages.ProductPage - Found 3 frames on product page
+2026-02-13 16:44:23.354 [main] INFO  com.amazon.pages.ProductPage - Attempting Add to Cart via role-based selector
+2026-02-13 16:44:24.329 [main] INFO  com.amazon.pages.ProductPage - Add to Cart clicked successfully using role-based selector
+2026-02-13 16:44:29.111 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Verifying product is added to cart
+2026-02-13 16:44:34.147 [main] INFO  com.amazon.pages.ProductPage - Cart confirmation message found
+2026-02-13 16:44:34.147 [main] INFO  com.amazon.pages.ProductPage - Item added to cart confirmation: true
+2026-02-13 16:44:34.539 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Product successfully added to cart!
+2026-02-13 16:44:34.542 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Verifying cart count is 1
+2026-02-13 16:44:34.555 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Cart count from badge: 1
+2026-02-13 16:44:34.555 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Cart count verified: 1
+2026-02-13 16:44:34.557 [main] INFO  com.amazon.stepdefinitions.Hooks - Finishing Scenario: Add to cart - edge from JSON test data - Status: PASSED
+2026-02-13 16:44:34.557 [main] INFO  com.amazon.factory.PlaywrightFactory - Tearing down Playwright resources
+2026-02-13 16:44:35.142 [main] INFO  com.amazon.factory.PlaywrightFactory - Playwright resources closed successfully
+2026-02-13 16:44:35.142 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:44:35.142 [main] INFO  com.amazon.stepdefinitions.Hooks - Scenario Completed: Add to cart - edge from JSON test data
+2026-02-13 16:44:35.142 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:44:35.164 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:44:35.164 [main] INFO  com.amazon.stepdefinitions.Hooks - Starting Scenario: Add to cart - edge from JSON test data
+2026-02-13 16:44:35.164 [main] INFO  com.amazon.stepdefinitions.Hooks - Tags: [@cart, @edge, @addToCart, @dataDriven, @json]
+2026-02-13 16:44:35.164 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:44:35.165 [main] INFO  com.amazon.factory.PlaywrightFactory - Initializing Playwright with browser: chromium (headless: false)
+2026-02-13 16:44:37.432 [main] INFO  com.amazon.factory.PlaywrightFactory - Launching Chromium browser
+2026-02-13 16:44:38.655 [main] INFO  com.amazon.factory.PlaywrightFactory - Browser initialized successfully with viewport: 1920x1080
+2026-02-13 16:44:38.656 [main] INFO  com.amazon.stepdefinitions.Hooks - Browser initialized for scenario: Add to cart - edge from JSON test data
+2026-02-13 16:44:38.663 [main] INFO  com.amazon.config.TestDataReader - Loading test data from path: testdata/add-to-cart-data.json (CI: false)
+2026-02-13 16:44:38.665 [main] INFO  com.amazon.config.TestDataReader - Loaded test data from classpath: testdata/add-to-cart-data.json
+2026-02-13 16:44:38.667 [main] INFO  com.amazon.pages.HomePage - Navigating to: https://www.amazon.in
+2026-02-13 16:44:39.841 [main] INFO  com.amazon.pages.HomePage - Navigated to Amazon.in home page
+2026-02-13 16:44:39.841 [main] DEBUG com.amazon.pages.HomePage - Waiting for selector: #twotabsearchtextbox with timeout: 10000ms
+2026-02-13 16:44:41.928 [main] INFO  com.amazon.pages.HomePage - Home page displayed: true
+2026-02-13 16:44:41.928 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Successfully navigated to Amazon.in home page
+2026-02-13 16:44:41.931 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Loading test scenario: edge_2 from category: edge
+2026-02-13 16:44:41.934 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Searching for product - mouse
+2026-02-13 16:44:41.934 [main] INFO  com.amazon.pages.HomePage - Searching for product: mouse
+2026-02-13 16:44:45.166 [main] INFO  com.amazon.pages.HomePage - Search submitted using role-based selectors
+2026-02-13 16:44:47.469 [main] INFO  com.amazon.pages.HomePage - Search submitted successfully
+2026-02-13 16:44:49.557 [main] DEBUG com.amazon.pages.SearchResultsPage - Waiting for selector: div.s-main-slot with timeout: 15000ms
+2026-02-13 16:44:49.649 [main] INFO  com.amazon.pages.SearchResultsPage - Search results displayed: true (count: 22)
+2026-02-13 16:44:49.662 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Search results count: 22
+2026-02-13 16:44:49.664 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Clicking on product - mouse
+2026-02-13 16:44:49.664 [main] INFO  com.amazon.pages.SearchResultsPage - Clicking on product in same tab: mouse
+2026-02-13 16:44:54.258 [main] DEBUG com.amazon.pages.SearchResultsPage - Role-based link click failed, trying partial match
+2026-02-13 16:44:54.259 [main] INFO  com.amazon.pages.SearchResultsPage - Getting product URL for: mouse
+2026-02-13 16:44:56.272 [main] INFO  com.amazon.pages.SearchResultsPage - Total search results found: 22
+2026-02-13 16:44:56.284 [main] DEBUG com.amazon.pages.SearchResultsPage - Result 0: Logitech MX Master 2S Bluetooth Edition Wireless Mouse, Multi-Surface, Hyper-Fast Scrolling, Ergonomic, Rechargeable, Connects Up to 3 Mac/PC Computers
+2026-02-13 16:44:56.284 [main] INFO  com.amazon.pages.SearchResultsPage - Found matching product at index 0: Logitech MX Master 2S Bluetooth Edition Wireless Mouse, Multi-Surface, Hyper-Fast Scrolling, Ergonomic, Rechargeable, Connects Up to 3 Mac/PC Computers
+2026-02-13 16:44:56.303 [main] DEBUG com.amazon.pages.SearchResultsPage - Found link using 'a.a-link-normal.s-underline-text' selector
+2026-02-13 16:44:56.314 [main] INFO  com.amazon.pages.SearchResultsPage - Product URL: #
+2026-02-13 16:44:56.315 [main] INFO  com.amazon.pages.SearchResultsPage - Navigating to product URL in same tab: #
+2026-02-13 16:44:56.426 [main] INFO  com.amazon.stepdefinitions.Hooks - Finishing Scenario: Add to cart - edge from JSON test data - Status: FAILED
+2026-02-13 16:44:56.428 [main] ERROR com.amazon.stepdefinitions.Hooks - Scenario FAILED: Add to cart - edge from JSON test data
+2026-02-13 16:44:59.471 [main] INFO  com.amazon.stepdefinitions.Hooks - Failure screenshot captured
+2026-02-13 16:44:59.471 [main] INFO  com.amazon.factory.PlaywrightFactory - Tearing down Playwright resources
+2026-02-13 16:45:00.791 [main] INFO  com.amazon.factory.PlaywrightFactory - Playwright resources closed successfully
+2026-02-13 16:45:00.791 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:45:00.791 [main] INFO  com.amazon.stepdefinitions.Hooks - Scenario Completed: Add to cart - edge from JSON test data
+2026-02-13 16:45:00.791 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:45:00.818 [main] WARN  com.amazon.plugins.FlakyAndRcaPlugin - Scenario failed (will be tagged as flaky if still failing after retries): Add to cart - edge from JSON test data
+2026-02-13 16:45:00.874 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:45:00.875 [main] INFO  com.amazon.stepdefinitions.Hooks - Starting Scenario: Cart with minimum quantity one (boundary)
+2026-02-13 16:45:00.875 [main] INFO  com.amazon.stepdefinitions.Hooks - Tags: [@cart, @boundary, @addToCart, @minQuantity]
+2026-02-13 16:45:00.877 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:45:00.877 [main] INFO  com.amazon.factory.PlaywrightFactory - Initializing Playwright with browser: chromium (headless: false)
+2026-02-13 16:45:03.240 [main] INFO  com.amazon.factory.PlaywrightFactory - Launching Chromium browser
+2026-02-13 16:45:04.403 [main] INFO  com.amazon.factory.PlaywrightFactory - Browser initialized successfully with viewport: 1920x1080
+2026-02-13 16:45:04.404 [main] INFO  com.amazon.stepdefinitions.Hooks - Browser initialized for scenario: Cart with minimum quantity one (boundary)
+2026-02-13 16:45:04.411 [main] INFO  com.amazon.config.TestDataReader - Loading test data from path: testdata/add-to-cart-data.json (CI: false)
+2026-02-13 16:45:04.413 [main] INFO  com.amazon.config.TestDataReader - Loaded test data from classpath: testdata/add-to-cart-data.json
+2026-02-13 16:45:04.416 [main] INFO  com.amazon.pages.HomePage - Navigating to: https://www.amazon.in
+2026-02-13 16:45:09.371 [main] INFO  com.amazon.pages.HomePage - Navigated to Amazon.in home page
+2026-02-13 16:45:09.372 [main] DEBUG com.amazon.pages.HomePage - Waiting for selector: #twotabsearchtextbox with timeout: 10000ms
+2026-02-13 16:45:10.144 [main] INFO  com.amazon.pages.HomePage - Home page displayed: true
+2026-02-13 16:45:10.146 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Successfully navigated to Amazon.in home page
+2026-02-13 16:45:10.148 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Searching for product - iPhone 17 Pro Max 2 TB
+2026-02-13 16:45:10.149 [main] INFO  com.amazon.pages.HomePage - Searching for product: iPhone 17 Pro Max 2 TB
+2026-02-13 16:45:12.457 [main] INFO  com.amazon.pages.HomePage - Search submitted using role-based selectors
+2026-02-13 16:45:14.406 [main] INFO  com.amazon.pages.HomePage - Search submitted successfully
+2026-02-13 16:45:15.538 [main] DEBUG com.amazon.pages.SearchResultsPage - Waiting for selector: div.s-main-slot with timeout: 15000ms
+2026-02-13 16:45:15.632 [main] INFO  com.amazon.pages.SearchResultsPage - Search results displayed: true (count: 16)
+2026-02-13 16:45:15.640 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Search results count: 16
+2026-02-13 16:45:15.641 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Clicking on product - iPhone 17 Pro Max
+2026-02-13 16:45:15.641 [main] INFO  com.amazon.pages.SearchResultsPage - Clicking on product in same tab: iPhone 17 Pro Max
+2026-02-13 16:45:18.954 [main] DEBUG com.amazon.pages.SearchResultsPage - Role-based link click failed, trying partial match
+2026-02-13 16:45:18.954 [main] INFO  com.amazon.pages.SearchResultsPage - Getting product URL for: iPhone 17 Pro Max
+2026-02-13 16:45:20.964 [main] INFO  com.amazon.pages.SearchResultsPage - Total search results found: 16
+2026-02-13 16:45:20.978 [main] DEBUG com.amazon.pages.SearchResultsPage - Result 0: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:45:20.978 [main] INFO  com.amazon.pages.SearchResultsPage - Found matching product at index 0: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:45:20.986 [main] DEBUG com.amazon.pages.SearchResultsPage - Found link using 'a.a-link-normal.s-underline-text' selector
+2026-02-13 16:45:20.995 [main] INFO  com.amazon.pages.SearchResultsPage - Product URL: https://www.amazon.in/iPhone-17-Pro-Max-Promotion/dp/B0FQFVX9ZZ/ref=sr_1_1?dib=eyJ2IjoiMSJ9.NFJLUmDgx_RkdWUjiD8zQy-jiplTARIjLnubLThpbErKtyL7RCIoBdKibKH-h8AJgO2GCEgizDvcTmm9maWOLkVvl7Uo8uuepA2DZXVfwfBbFS2X5PRQzsa5izgXM3bdJljMKom0T8Zyrxf-JXHfhRrpp7RQqorWbkX6LR8KEQFG5vW5cFGIlTeGAr7Lhe4Brdbka0DA_fbG174-IfPUCSLZVlHfRBaIqYmbO3zJ1Es.rgZbn3S_ZqUogzaLrD96JvisLoIlTzW0F79d0O8jMFQ&dib_tag=se&keywords=iPhone+17+Pro+Max+2+TB&qid=1770981310&sr=8-1#customerReviews
+2026-02-13 16:45:20.995 [main] INFO  com.amazon.pages.SearchResultsPage - Navigating to product URL in same tab: https://www.amazon.in/iPhone-17-Pro-Max-Promotion/dp/B0FQFVX9ZZ/ref=sr_1_1?dib=eyJ2IjoiMSJ9.NFJLUmDgx_RkdWUjiD8zQy-jiplTARIjLnubLThpbErKtyL7RCIoBdKibKH-h8AJgO2GCEgizDvcTmm9maWOLkVvl7Uo8uuepA2DZXVfwfBbFS2X5PRQzsa5izgXM3bdJljMKom0T8Zyrxf-JXHfhRrpp7RQqorWbkX6LR8KEQFG5vW5cFGIlTeGAr7Lhe4Brdbka0DA_fbG174-IfPUCSLZVlHfRBaIqYmbO3zJ1Es.rgZbn3S_ZqUogzaLrD96JvisLoIlTzW0F79d0O8jMFQ&dib_tag=se&keywords=iPhone+17+Pro+Max+2+TB&qid=1770981310&sr=8-1#customerReviews
+2026-02-13 16:45:29.590 [main] INFO  com.amazon.pages.SearchResultsPage - Product page loaded in same tab successfully
+2026-02-13 16:45:31.603 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found 3 frames on the page
+2026-02-13 16:45:31.603 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found relevant iframe: 
+2026-02-13 16:45:31.603 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found relevant iframe: 
+2026-02-13 16:45:31.603 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found relevant iframe: 
+2026-02-13 16:45:31.603 [main] DEBUG com.amazon.pages.ProductPage - Waiting for selector: span#productTitle with timeout: 10000ms
+2026-02-13 16:45:31.720 [main] INFO  com.amazon.pages.ProductPage - Product title: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:45:31.720 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Product page loaded in same tab. Title: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:45:32.947 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Clicking Add to Cart button
+2026-02-13 16:45:32.947 [main] INFO  com.amazon.pages.ProductPage - Clicking Add to Cart button
+2026-02-13 16:45:36.431 [main] DEBUG com.amazon.pages.ProductPage - Scroll result: scrolled
+2026-02-13 16:45:37.948 [main] INFO  com.amazon.pages.ProductPage - Found 3 frames on product page
+2026-02-13 16:45:40.085 [main] INFO  com.amazon.pages.ProductPage - Attempting Add to Cart via role-based selector
+2026-02-13 16:45:41.179 [main] INFO  com.amazon.pages.ProductPage - Add to Cart clicked successfully using role-based selector
+2026-02-13 16:45:45.879 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Verifying product is added to cart
+2026-02-13 16:45:50.911 [main] INFO  com.amazon.pages.ProductPage - Cart confirmation message found
+2026-02-13 16:45:50.911 [main] INFO  com.amazon.pages.ProductPage - Item added to cart confirmation: true
+2026-02-13 16:45:51.412 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Product successfully added to cart!
+2026-02-13 16:45:51.419 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Verifying cart count is 1
+2026-02-13 16:45:51.436 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Cart count from badge: 1
+2026-02-13 16:45:51.437 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Cart count verified: 1
+2026-02-13 16:45:51.441 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Verifying product 'iPhone 17 Pro Max' has quantity 1 in cart
+2026-02-13 16:45:51.441 [main] INFO  com.amazon.pages.CartPage - Checking if product 'iPhone 17 Pro Max' is in cart
+2026-02-13 16:45:51.494 [main] INFO  com.amazon.pages.CartPage - Cart is empty: false
+2026-02-13 16:45:51.512 [main] INFO  com.amazon.pages.CartPage - Cart is empty: false
+2026-02-13 16:45:51.561 [main] INFO  com.amazon.pages.CartPage - Found 2 items with standard selector
+2026-02-13 16:46:21.569 [main] DEBUG com.amazon.pages.CartPage - Could not get title from standard item
+2026-02-13 16:46:51.588 [main] DEBUG com.amazon.pages.CartPage - Could not get title from standard item
+2026-02-13 16:46:51.588 [main] INFO  com.amazon.pages.CartPage - Trying direct product title selector
+2026-02-13 16:46:51.594 [main] DEBUG com.amazon.pages.CartPage - Found 0 elements with selector: .sc-product-title
+2026-02-13 16:46:51.604 [main] DEBUG com.amazon.pages.CartPage - Found 0 elements with selector: .sc-product-title a
+2026-02-13 16:46:51.610 [main] DEBUG com.amazon.pages.CartPage - Found 0 elements with selector: span.sc-product-title
+2026-02-13 16:46:51.615 [main] DEBUG com.amazon.pages.CartPage - Found 0 elements with selector: [data-item-index] .a-size-medium
+2026-02-13 16:46:51.621 [main] DEBUG com.amazon.pages.CartPage - Found 0 elements with selector: h2.sc-product-title
+2026-02-13 16:46:51.625 [main] DEBUG com.amazon.pages.CartPage - Found 0 elements with selector: .sc-list-item .a-size-medium
+2026-02-13 16:46:51.631 [main] DEBUG com.amazon.pages.CartPage - Found 0 elements with selector: div[data-asin] .a-size-medium
+2026-02-13 16:46:51.631 [main] INFO  com.amazon.pages.CartPage - Trying to extract product titles from page text
+2026-02-13 16:46:51.983 [main] DEBUG com.amazon.pages.CartPage - Found potential product title: Keyboard shortcuts
+2026-02-13 16:46:51.992 [main] DEBUG com.amazon.pages.CartPage - Found potential product title: ₹2,29,900.00
+2026-02-13 16:46:52.004 [main] DEBUG com.amazon.pages.CartPage - Found potential product title: ₹2,29,900.00
+2026-02-13 16:46:52.014 [main] DEBUG com.amazon.pages.CartPage - Found potential product title: Added to cart
+2026-02-13 16:46:52.051 [main] DEBUG com.amazon.pages.CartPage - Found potential product title: Cart subtotal:
+2026-02-13 16:46:52.063 [main] DEBUG com.amazon.pages.CartPage - Found potential product title: Customers who shopped for iPhone 17 Pro Max 2 TB: 17.42… also shopped for:Page 1 of 3  Start over
+2026-02-13 16:46:52.075 [main] DEBUG com.amazon.pages.CartPage - Found potential product title: Top picks for youPage 1 of 1  Start over
+2026-02-13 16:46:52.088 [main] DEBUG com.amazon.pages.CartPage - Found potential product title: Deals for youPage 1 of 1  Start over
+2026-02-13 16:46:52.100 [main] DEBUG com.amazon.pages.CartPage - Found potential product title: Bargain recommendationsPage 1 of 1  Start over
+2026-02-13 16:46:52.100 [main] INFO  com.amazon.pages.CartPage - Found 9 items in cart. Titles: [Keyboard shortcuts, ₹2,29,900.00, ₹2,29,900.00, Added to cart, Cart subtotal:, Customers who shopped for iPhone 17 Pro Max 2 TB: 17.42… also shopped for:Page 1 of 3  Start over, Top picks for youPage 1 of 1  Start over, Deals for youPage 1 of 1  Start over, Bargain recommendationsPage 1 of 1  Start over]
+2026-02-13 16:46:52.100 [main] DEBUG com.amazon.pages.CartPage - Comparing: 'iPhone 17 Pro Max' with 'Keyboard shortcuts'
+2026-02-13 16:46:52.100 [main] DEBUG com.amazon.pages.CartPage - Comparing: 'iPhone 17 Pro Max' with '₹2,29,900.00'
+2026-02-13 16:46:52.100 [main] DEBUG com.amazon.pages.CartPage - Comparing: 'iPhone 17 Pro Max' with '₹2,29,900.00'
+2026-02-13 16:46:52.100 [main] DEBUG com.amazon.pages.CartPage - Comparing: 'iPhone 17 Pro Max' with 'Added to cart'
+2026-02-13 16:46:52.100 [main] DEBUG com.amazon.pages.CartPage - Comparing: 'iPhone 17 Pro Max' with 'Cart subtotal:'
+2026-02-13 16:46:52.100 [main] DEBUG com.amazon.pages.CartPage - Comparing: 'iPhone 17 Pro Max' with 'Customers who shopped for iPhone 17 Pro Max 2 TB: 17.42… also shopped for:Page 1 of 3  Start over'
+2026-02-13 16:46:52.101 [main] INFO  com.amazon.pages.CartPage - Product 'iPhone 17 Pro Max' found in cart (exact match): Customers who shopped for iPhone 17 Pro Max 2 TB: 17.42… also shopped for:Page 1 of 3  Start over
+2026-02-13 16:46:52.107 [main] INFO  com.amazon.pages.CartPage - Getting product details for: iPhone 17 Pro Max
+2026-02-13 16:46:52.118 [main] INFO  com.amazon.pages.CartPage - Cart is empty: false
+2026-02-13 16:47:22.144 [main] ERROR com.amazon.pages.CartPage - Error getting product details: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\sathy\AppData\Local\Temp\playwright-java-1300898210984782260\package\lib\server\progress.js:75:26)
+    at Frame._callOnElementOnceMatches (C:\Users\sathy\AppData\Local\Temp\playwright-java-1300898210984782260\package\lib\server\frames.js:1479:23)
+    at Frame.textContent (C:\Users\sathy\AppData\Local\Temp\playwright-java-1300898210984782260\package\lib\server\frames.js:1089:17)
+    at FrameDispatcher.textContent (C:\Users\sathy\AppData\Local\Temp\playwright-java-1300898210984782260\package\lib\server\dispatchers\frameDispatcher.js:179:37)
+    at FrameDispatcher._handleCommand (C:\Users\sathy\AppData\Local\Temp\playwright-java-1300898210984782260\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\sathy\AppData\Local\Temp\playwright-java-1300898210984782260\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+-   - waiting for locator("[data-name='Active Items'] .sc-list-item, .sc-list-item-content, [data-item-index], .sc-cart-item, .sc-list-item, div[data-asin]").first().locator(".sc-product-title, .a-size-medium.sc-product-title, h2.sc-product-title, [data-item-index] .a-size-medium, .sc-product-title a, span.sc-product-title, h3 a")
+
+2026-02-13 16:47:22.145 [main] ERROR com.amazon.pages.CartPage - Error verifying product quantity: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\sathy\AppData\Local\Temp\playwright-java-1300898210984782260\package\lib\server\progress.js:75:26)
+    at Frame._callOnElementOnceMatches (C:\Users\sathy\AppData\Local\Temp\playwright-java-1300898210984782260\package\lib\server\frames.js:1479:23)
+    at Frame.textContent (C:\Users\sathy\AppData\Local\Temp\playwright-java-1300898210984782260\package\lib\server\frames.js:1089:17)
+    at FrameDispatcher.textContent (C:\Users\sathy\AppData\Local\Temp\playwright-java-1300898210984782260\package\lib\server\dispatchers\frameDispatcher.js:179:37)
+    at FrameDispatcher._handleCommand (C:\Users\sathy\AppData\Local\Temp\playwright-java-1300898210984782260\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\sathy\AppData\Local\Temp\playwright-java-1300898210984782260\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+-   - waiting for locator("[data-name='Active Items'] .sc-list-item, .sc-list-item-content, [data-item-index], .sc-cart-item, .sc-list-item, div[data-asin]").first().locator(".sc-product-title, .a-size-medium.sc-product-title, h2.sc-product-title, [data-item-index] .a-size-medium, .sc-product-title a, span.sc-product-title, h3 a")
+
+2026-02-13 16:47:22.156 [main] INFO  com.amazon.stepdefinitions.Hooks - Finishing Scenario: Cart with minimum quantity one (boundary) - Status: FAILED
+2026-02-13 16:47:22.157 [main] ERROR com.amazon.stepdefinitions.Hooks - Scenario FAILED: Cart with minimum quantity one (boundary)
+2026-02-13 16:47:23.738 [main] INFO  com.amazon.stepdefinitions.Hooks - Failure screenshot captured
+2026-02-13 16:47:23.739 [main] INFO  com.amazon.factory.PlaywrightFactory - Tearing down Playwright resources
+2026-02-13 16:47:24.466 [main] INFO  com.amazon.factory.PlaywrightFactory - Playwright resources closed successfully
+2026-02-13 16:47:24.466 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:47:24.468 [main] INFO  com.amazon.stepdefinitions.Hooks - Scenario Completed: Cart with minimum quantity one (boundary)
+2026-02-13 16:47:24.468 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:47:24.481 [main] WARN  com.amazon.plugins.FlakyAndRcaPlugin - Scenario failed (will be tagged as flaky if still failing after retries): Cart with minimum quantity one (boundary)
+2026-02-13 16:47:24.521 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:47:24.522 [main] INFO  com.amazon.stepdefinitions.Hooks - Starting Scenario: Add to cart - boundary from JSON test data
+2026-02-13 16:47:24.523 [main] INFO  com.amazon.stepdefinitions.Hooks - Tags: [@cart, @boundary, @addToCart, @dataDriven, @json]
+2026-02-13 16:47:24.523 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:47:24.523 [main] INFO  com.amazon.factory.PlaywrightFactory - Initializing Playwright with browser: chromium (headless: false)
+2026-02-13 16:47:26.590 [main] INFO  com.amazon.factory.PlaywrightFactory - Launching Chromium browser
+2026-02-13 16:47:27.799 [main] INFO  com.amazon.factory.PlaywrightFactory - Browser initialized successfully with viewport: 1920x1080
+2026-02-13 16:47:27.799 [main] INFO  com.amazon.stepdefinitions.Hooks - Browser initialized for scenario: Add to cart - boundary from JSON test data
+2026-02-13 16:47:27.806 [main] INFO  com.amazon.config.TestDataReader - Loading test data from path: testdata/add-to-cart-data.json (CI: false)
+2026-02-13 16:47:27.807 [main] INFO  com.amazon.config.TestDataReader - Loaded test data from classpath: testdata/add-to-cart-data.json
+2026-02-13 16:47:27.810 [main] INFO  com.amazon.pages.HomePage - Navigating to: https://www.amazon.in
+2026-02-13 16:47:29.175 [main] INFO  com.amazon.pages.HomePage - Navigated to Amazon.in home page
+2026-02-13 16:47:29.175 [main] DEBUG com.amazon.pages.HomePage - Waiting for selector: #twotabsearchtextbox with timeout: 10000ms
+2026-02-13 16:47:30.116 [main] INFO  com.amazon.pages.HomePage - Home page displayed: true
+2026-02-13 16:47:30.117 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Successfully navigated to Amazon.in home page
+2026-02-13 16:47:30.120 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Loading test scenario: boundary_1 from category: boundary
+2026-02-13 16:47:30.122 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Searching for product - iPhone 17 Pro Max 2 TB
+2026-02-13 16:47:30.122 [main] INFO  com.amazon.pages.HomePage - Searching for product: iPhone 17 Pro Max 2 TB
+2026-02-13 16:47:32.946 [main] INFO  com.amazon.pages.HomePage - Search submitted using role-based selectors
+2026-02-13 16:47:35.789 [main] INFO  com.amazon.pages.HomePage - Search submitted successfully
+2026-02-13 16:47:37.509 [main] DEBUG com.amazon.pages.SearchResultsPage - Waiting for selector: div.s-main-slot with timeout: 15000ms
+2026-02-13 16:47:37.631 [main] INFO  com.amazon.pages.SearchResultsPage - Search results displayed: true (count: 16)
+2026-02-13 16:47:37.638 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Search results count: 16
+2026-02-13 16:47:37.641 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Clicking on product - iPhone 17 Pro Max
+2026-02-13 16:47:37.641 [main] INFO  com.amazon.pages.SearchResultsPage - Clicking on product in same tab: iPhone 17 Pro Max
+2026-02-13 16:47:40.664 [main] DEBUG com.amazon.pages.SearchResultsPage - Role-based link click failed, trying partial match
+2026-02-13 16:47:40.664 [main] INFO  com.amazon.pages.SearchResultsPage - Getting product URL for: iPhone 17 Pro Max
+2026-02-13 16:47:42.696 [main] INFO  com.amazon.pages.SearchResultsPage - Total search results found: 16
+2026-02-13 16:47:42.721 [main] DEBUG com.amazon.pages.SearchResultsPage - Result 0: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:47:42.722 [main] INFO  com.amazon.pages.SearchResultsPage - Found matching product at index 0: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:47:42.794 [main] DEBUG com.amazon.pages.SearchResultsPage - Found link using 'a.a-link-normal.s-underline-text' selector
+2026-02-13 16:47:42.820 [main] INFO  com.amazon.pages.SearchResultsPage - Product URL: https://www.amazon.in/iPhone-17-Pro-Max-Promotion/dp/B0FQFVX9ZZ/ref=sr_1_1?crid=1MPH84JTCULK9&dib=eyJ2IjoiMSJ9.NFJLUmDgx_RkdWUjiD8zQy-jiplTARIjLnubLThpbErKtyL7RCIoBdKibKH-h8AJgO2GCEgizDvcTmm9maWOLkVvl7Uo8uuepA2DZXVfwfBbFS2X5PRQzsa5izgXM3bdJljMKom0T8Zyrxf-JXHfhRrpp7RQqorWbkX6LR8KEQFG5vW5cFGIlTeGAr7Lhe4Brdbka0DA_fbG174-IfPUCSLZVlHfRBaIqYmbO3zJ1Es.0WI2rcNBEs9pAtmMuOL6kdF2eyYKOkRWE_iCJGN67Xw&dib_tag=se&keywords=iPhone+17+Pro+Max+2+TB&qid=1770981451&sprefix=iphone+17+pro+max+2+tb%2Caps%2C546&sr=8-1#customerReviews
+2026-02-13 16:47:42.821 [main] INFO  com.amazon.pages.SearchResultsPage - Navigating to product URL in same tab: https://www.amazon.in/iPhone-17-Pro-Max-Promotion/dp/B0FQFVX9ZZ/ref=sr_1_1?crid=1MPH84JTCULK9&dib=eyJ2IjoiMSJ9.NFJLUmDgx_RkdWUjiD8zQy-jiplTARIjLnubLThpbErKtyL7RCIoBdKibKH-h8AJgO2GCEgizDvcTmm9maWOLkVvl7Uo8uuepA2DZXVfwfBbFS2X5PRQzsa5izgXM3bdJljMKom0T8Zyrxf-JXHfhRrpp7RQqorWbkX6LR8KEQFG5vW5cFGIlTeGAr7Lhe4Brdbka0DA_fbG174-IfPUCSLZVlHfRBaIqYmbO3zJ1Es.0WI2rcNBEs9pAtmMuOL6kdF2eyYKOkRWE_iCJGN67Xw&dib_tag=se&keywords=iPhone+17+Pro+Max+2+TB&qid=1770981451&sprefix=iphone+17+pro+max+2+tb%2Caps%2C546&sr=8-1#customerReviews
+2026-02-13 16:47:54.496 [main] INFO  com.amazon.pages.SearchResultsPage - Product page loaded in same tab successfully
+2026-02-13 16:47:56.507 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found 3 frames on the page
+2026-02-13 16:47:56.507 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found relevant iframe: 
+2026-02-13 16:47:56.507 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found relevant iframe: 
+2026-02-13 16:47:56.507 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Found relevant iframe: 
+2026-02-13 16:47:56.507 [main] DEBUG com.amazon.pages.ProductPage - Waiting for selector: span#productTitle with timeout: 10000ms
+2026-02-13 16:47:56.595 [main] INFO  com.amazon.pages.ProductPage - Product title: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:47:56.595 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Product page loaded in same tab. Title: iPhone 17 Pro Max 2 TB: 17.42 cm (6.9″) Display with Promotion, A19 Pro Chip, Best Battery Life in Any iPhone Ever, Pro Fusion Camera System, Center Stage Front Camera; Deep Blue
+2026-02-13 16:47:57.536 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Clicking Add to Cart button
+2026-02-13 16:47:57.536 [main] INFO  com.amazon.pages.ProductPage - Clicking Add to Cart button
+2026-02-13 16:48:00.839 [main] DEBUG com.amazon.pages.ProductPage - Scroll result: scrolled
+2026-02-13 16:48:02.358 [main] INFO  com.amazon.pages.ProductPage - Found 3 frames on product page
+2026-02-13 16:48:04.533 [main] INFO  com.amazon.pages.ProductPage - Attempting Add to Cart via role-based selector
+2026-02-13 16:48:05.624 [main] INFO  com.amazon.pages.ProductPage - Add to Cart clicked successfully using role-based selector
+2026-02-13 16:48:11.196 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Verifying product is added to cart
+2026-02-13 16:48:16.229 [main] INFO  com.amazon.pages.ProductPage - Cart confirmation message found
+2026-02-13 16:48:16.229 [main] INFO  com.amazon.pages.ProductPage - Item added to cart confirmation: true
+2026-02-13 16:48:16.547 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Product successfully added to cart!
+2026-02-13 16:48:16.549 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Step: Verifying cart count is 1
+2026-02-13 16:48:16.557 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Cart count from badge: 1
+2026-02-13 16:48:16.557 [main] INFO  com.amazon.stepdefinitions.AddToCartSteps - Cart count verified: 1
+2026-02-13 16:48:16.559 [main] INFO  com.amazon.stepdefinitions.Hooks - Finishing Scenario: Add to cart - boundary from JSON test data - Status: PASSED
+2026-02-13 16:48:16.561 [main] INFO  com.amazon.factory.PlaywrightFactory - Tearing down Playwright resources
+2026-02-13 16:48:17.023 [main] INFO  com.amazon.factory.PlaywrightFactory - Playwright resources closed successfully
+2026-02-13 16:48:17.023 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:48:17.023 [main] INFO  com.amazon.stepdefinitions.Hooks - Scenario Completed: Add to cart - boundary from JSON test data
+2026-02-13 16:48:17.023 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:48:17.040 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:48:17.040 [main] INFO  com.amazon.stepdefinitions.Hooks - Starting Scenario: Add to cart - boundary from JSON test data
+2026-02-13 16:48:17.040 [main] INFO  com.amazon.stepdefinitions.Hooks - Tags: [@cart, @boundary, @addToCart, @dataDriven, @json]
+2026-02-13 16:48:17.040 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:48:17.040 [main] INFO  com.amazon.factory.PlaywrightFactory - Initializing Playwright with browser: chromium (headless: false)
+2026-02-13 16:48:18.595 [main] INFO  com.amazon.factory.PlaywrightFactory - Launching Chromium browser
+2026-02-13 16:48:19.693 [main] INFO  com.amazon.factory.PlaywrightFactory - Browser initialized successfully with viewport: 1920x1080
+2026-02-13 16:48:19.693 [main] INFO  com.amazon.stepdefinitions.Hooks - Browser initialized for scenario: Add to cart - boundary from JSON test data
+2026-02-13 16:48:19.697 [main] INFO  com.amazon.config.TestDataReader - Loading test data from path: testdata/add-to-cart-data.json (CI: false)
+2026-02-13 16:48:19.723 [main] INFO  com.amazon.stepdefinitions.Hooks - Finishing Scenario: Add to cart - boundary from JSON test data - Status: FAILED
+2026-02-13 16:48:19.723 [main] ERROR com.amazon.stepdefinitions.Hooks - Scenario FAILED: Add to cart - boundary from JSON test data
+2026-02-13 16:48:19.934 [main] INFO  com.amazon.stepdefinitions.Hooks - Failure screenshot captured
+2026-02-13 16:48:19.934 [main] INFO  com.amazon.factory.PlaywrightFactory - Tearing down Playwright resources
+2026-02-13 16:48:20.191 [main] INFO  com.amazon.factory.PlaywrightFactory - Playwright resources closed successfully
+2026-02-13 16:48:20.191 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:48:20.191 [main] INFO  com.amazon.stepdefinitions.Hooks - Scenario Completed: Add to cart - boundary from JSON test data
+2026-02-13 16:48:20.191 [main] INFO  com.amazon.stepdefinitions.Hooks - ========================================
+2026-02-13 16:48:20.199 [main] WARN  com.amazon.plugins.FlakyAndRcaPlugin - Scenario failed (will be tagged as flaky if still failing after retries): Add to cart - boundary from JSON test data
+2026-02-13 16:48:20.395 [main] INFO  com.amazon.plugins.FlakyAndRcaPlugin - Flaky/RCA reports written to C:\Users\sathy\OneDrive\Desktop\PlaywrightJava\target (8 failure(s))

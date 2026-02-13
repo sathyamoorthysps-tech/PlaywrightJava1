@@ -1,0 +1,70 @@
+{
+  "flakyScenarios": [
+    {
+      "scenarioName": "Add product to cart - positive (data from JSON)",
+      "uri": "file:///C:/Users/sathy/OneDrive/Desktop/PlaywrightJava/src/test/resources/features/addToCart.feature",
+      "line": 26,
+      "tags": "@cart, @smoke, @positive, @addToCart, @optimized, @dataDriven",
+      "errorMessage": "Error {\n  message='Protocol error (Page.navigate): Cannot navigate to invalid URL\n  name='Error\n  stack='Error: Protocol error (Page.navigate): Cannot navigate to invalid URL\n    at C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\chromium\\crConnection.js:135:16\n    at new Promise (<anonymous>)\n    at CRSession.send (C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\chromium\\crConnection.js:131:12)\n    at FrameSession._navigate (C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\chromium\\crPage.js:506:41)\n    at CRPage.navigateFrame (C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\chromium\\crPage.js:166:41)\n    at Frame._gotoAction (C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\frames.js:540:55)\n    at C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\frames.js:524:74\n    at Frame.raceNavigationAction (C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\frames.js:496:95)\n    at Frame._goto (C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\frames.js:524:17)\n    at C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\frames.js:521:44\n}\nCall log:\n-   - navigating to \"#\", waiting until \"load\"\n",
+      "timestamp": "2026-02-13T11:07:25.260773900Z"
+    },
+    {
+      "scenarioName": "Add to cart - positive from JSON test data",
+      "uri": "file:///C:/Users/sathy/OneDrive/Desktop/PlaywrightJava/src/test/resources/features/addToCart.feature",
+      "line": 54,
+      "tags": "@cart, @smoke, @positive, @addToCart, @dataDriven, @json",
+      "errorMessage": "Error {\n  message='Protocol error (Page.navigate): Cannot navigate to invalid URL\n  name='Error\n  stack='Error: Protocol error (Page.navigate): Cannot navigate to invalid URL\n    at C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\chromium\\crConnection.js:135:16\n    at new Promise (<anonymous>)\n    at CRSession.send (C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\chromium\\crConnection.js:131:12)\n    at FrameSession._navigate (C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\chromium\\crPage.js:506:41)\n    at CRPage.navigateFrame (C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\chromium\\crPage.js:166:41)\n    at Frame._gotoAction (C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\frames.js:540:55)\n    at C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\frames.js:524:74\n    at Frame.raceNavigationAction (C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\frames.js:496:95)\n    at Frame._goto (C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\frames.js:524:17)\n    at C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\frames.js:521:44\n}\nCall log:\n-   - navigating to \"#\", waiting until \"load\"\n",
+      "timestamp": "2026-02-13T11:10:00.891376300Z"
+    },
+    {
+      "scenarioName": "Search with non-existent product - no results",
+      "uri": "file:///C:/Users/sathy/OneDrive/Desktop/PlaywrightJava/src/test/resources/features/addToCart.feature",
+      "line": 58,
+      "tags": "@cart, @negative, @addToCart, @noResults",
+      "errorMessage": "Expected no search results to be displayed",
+      "timestamp": "2026-02-13T11:10:25.011043600Z"
+    },
+    {
+      "scenarioName": "No results - negative from JSON test data",
+      "uri": "file:///C:/Users/sathy/OneDrive/Desktop/PlaywrightJava/src/test/resources/features/addToCart.feature",
+      "line": 85,
+      "tags": "@cart, @negative, @addToCart, @dataDriven, @json",
+      "errorMessage": "Expected no search results to be displayed",
+      "timestamp": "2026-02-13T11:11:53.988696Z"
+    },
+    {
+      "scenarioName": "Add to cart with short search term (edge)",
+      "uri": "file:///C:/Users/sathy/OneDrive/Desktop/PlaywrightJava/src/test/resources/features/addToCart.feature",
+      "line": 99,
+      "tags": "@cart, @edge, @addToCart, @shortSearchTerm",
+      "errorMessage": "Error {\n  message='Protocol error (Page.navigate): Cannot navigate to invalid URL\n  name='Error\n  stack='Error: Protocol error (Page.navigate): Cannot navigate to invalid URL\n    at C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\chromium\\crConnection.js:135:16\n    at new Promise (<anonymous>)\n    at CRSession.send (C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\chromium\\crConnection.js:131:12)\n    at FrameSession._navigate (C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\chromium\\crPage.js:506:41)\n    at CRPage.navigateFrame (C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\chromium\\crPage.js:166:41)\n    at Frame._gotoAction (C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\frames.js:540:55)\n    at C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\frames.js:524:74\n    at Frame.raceNavigationAction (C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\frames.js:496:95)\n    at Frame._goto (C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\frames.js:524:17)\n    at C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\frames.js:521:44\n}\nCall log:\n-   - navigating to \"#\", waiting until \"load\"\n",
+      "timestamp": "2026-02-13T11:13:35.223151800Z"
+    },
+    {
+      "scenarioName": "Add to cart - edge from JSON test data",
+      "uri": "file:///C:/Users/sathy/OneDrive/Desktop/PlaywrightJava/src/test/resources/features/addToCart.feature",
+      "line": 120,
+      "tags": "@cart, @edge, @addToCart, @dataDriven, @json",
+      "errorMessage": "Error {\n  message='Protocol error (Page.navigate): Cannot navigate to invalid URL\n  name='Error\n  stack='Error: Protocol error (Page.navigate): Cannot navigate to invalid URL\n    at C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\chromium\\crConnection.js:135:16\n    at new Promise (<anonymous>)\n    at CRSession.send (C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\chromium\\crConnection.js:131:12)\n    at FrameSession._navigate (C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\chromium\\crPage.js:506:41)\n    at CRPage.navigateFrame (C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\chromium\\crPage.js:166:41)\n    at Frame._gotoAction (C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\frames.js:540:55)\n    at C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\frames.js:524:74\n    at Frame.raceNavigationAction (C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\frames.js:496:95)\n    at Frame._goto (C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\frames.js:524:17)\n    at C:\\Users\\sathy\\AppData\\Local\\Temp\\playwright-java-1300898210984782260\\package\\lib\\server\\frames.js:521:44\n}\nCall log:\n-   - navigating to \"#\", waiting until \"load\"\n",
+      "timestamp": "2026-02-13T11:15:00.801388600Z"
+    },
+    {
+      "scenarioName": "Cart with minimum quantity one (boundary)",
+      "uri": "file:///C:/Users/sathy/OneDrive/Desktop/PlaywrightJava/src/test/resources/features/addToCart.feature",
+      "line": 124,
+      "tags": "@cart, @boundary, @addToCart, @minQuantity",
+      "errorMessage": "Product 'iPhone 17 Pro Max' should have quantity 1",
+      "timestamp": "2026-02-13T11:17:24.474471300Z"
+    },
+    {
+      "scenarioName": "Add to cart - boundary from JSON test data",
+      "uri": "file:///C:/Users/sathy/OneDrive/Desktop/PlaywrightJava/src/test/resources/features/addToCart.feature",
+      "line": 145,
+      "tags": "@cart, @boundary, @addToCart, @dataDriven, @json",
+      "errorMessage": "Failed to instantiate class com.amazon.stepdefinitions.AddToCartSteps",
+      "timestamp": "2026-02-13T11:18:20.195655Z"
+    }
+  ],
+  "tag": "@flaky",
+  "description": "Scenarios that failed after 2 retries (3 attempts total)"
+}

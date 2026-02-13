@@ -29,56 +29,79 @@ A comprehensive end-to-end test automation framework for Amazon.in e-commerce pl
 | BDD Framework | Cucumber | 7.20.1 |
 | Test Runner | JUnit | 4.13.2 |
 | Reporting | Allure | 2.29.1 |
+| Allure Maven Plugin | allure-maven | 2.14.0 |
 | Logging | Log4j2 | 2.24.3 |
-| Build Tool | Maven | 3.x |
+| JSON (test data) | Jackson | 2.18.2 |
+| Build Tool | Maven | 3.x (wrapper: mvnw) |
 
 ## 📁 Project Structure
 
 ```
-playwright-automation-framework/
+PlaywrightJava/
 ├── src/
 │   ├── main/java/com/amazon/
-│   │   ├── config/          # Configuration management
-│   │   ├── factory/         # Browser factory
-│   │   ├── pages/           # Page Object Model classes
-│   │   └── utils/           # Utility classes
+│   │   ├── config/          # ConfigReader, TestDataReader
+│   │   ├── factory/         # PlaywrightFactory (browser management)
+│   │   ├── pages/           # Page Object Model (BasePage, HomePage, SearchResultsPage, ProductPage, CartPage)
+│   │   └── utils/           # LoggerUtil and helpers
 │   └── test/java/com/amazon/
-│       ├── api/             # API tests
-│       ├── runners/         # Test runners
-│       └── stepdefinitions/ # Cucumber step definitions
+│       ├── api/             # API tests (Playwright APIRequestContext)
+│       ├── plugins/         # FlakyAndRcaPlugin (flaky detection & RCA report)
+│       ├── runners/         # TestRunner (Cucumber JUnit runner)
+│       └── stepdefinitions/ # Cucumber step definitions & Hooks
 ├── src/test/resources/
-│   ├── features/            # Cucumber feature files
-│   └── config.properties    # Configuration file
-├── .github/workflows/       # GitHub Actions CI/CD
+│   ├── features/            # Cucumber feature files (e.g. addToCart.feature)
+│   ├── testdata/            # JSON test data (e.g. add-to-cart-data.json)
+│   ├── config.properties    # Base URL, browser, timeouts, screenshots, testdata.path
+│   ├── allure.properties    # Allure report config
+│   └── log4j2.xml           # Log4j2 configuration
+├── .github/workflows/       # GitHub Actions CI (ci.yml)
 ├── Jenkinsfile             # Jenkins pipeline
-└── pom.xml                 # Maven configuration
+├── pom.xml                  # Maven configuration
+├── mvnw, mvnw.cmd           # Maven Wrapper
+├── set-java-maven-env.ps1   # PowerShell env setup (Windows)
+├── INSTALL_JDK_MAVEN.md     # JDK & Maven install guide
+└── MCP_CONFIGURATION.md     # MCP / Cursor configuration
 ```
 
 ## 🚦 Quick Start
 
 ### 1. Clone the Repository
 ```bash
-git clone <repository-url>
-cd playwright-automation-framework
+git clone https://github.com/sathyamoorthysps-tech/PlaywrightJava1.git
+cd PlaywrightJava1
 ```
+Or use the Maven Wrapper: `./mvnw` (Linux/macOS) or `mvnw.cmd` (Windows) instead of `mvn`.
 
 ### 2. Install Dependencies
 ```bash
 mvn clean install
 ```
 
-### 3. Configure Settings
+### 3. Install Playwright Browsers (required before first run)
+```bash
+mvn exec:java -e -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="install --with-deps"
+```
+
+### 4. Configure Settings
 Edit `src/test/resources/config.properties`:
 ```properties
 base.url=https://www.amazon.in
 browser=chromium
 headless=false
 default.timeout=30000
+navigation.timeout=60000
+screenshot.on.failure=true
+video.record=false
+trace.record=false
+testdata.path=testdata/add-to-cart-data.json
 ```
+Override at runtime: `-Dbrowser=firefox -Dheadless=true` or `-Dtestdata.path=testdata/my-data.json`. CI can set `TESTDATA_PATH` env var.
 
-### 4. Run Tests
+### 5. Run Tests
+The default runner (`TestRunner`) is configured with tag `@addToCart`. Tests run in a single thread by default.
 ```bash
-# Run all tests
+# Run default suite (@addToCart)
 mvn test
 
 # Run specific test runner
@@ -86,19 +109,22 @@ mvn test -Dtest=TestRunner
 
 # Run with specific tags
 mvn test -Dcucumber.filter.tags="@smoke"
+mvn test -Dcucumber.filter.tags="@positive and @addToCart"
 
-# Run in parallel
-mvn test -Dparallel=methods -DthreadCount=3
+# Run with browser/headless override
+mvn test -Dbrowser=firefox -Dheadless=true
 ```
+For multi-browser runs, use the GitHub Actions matrix or run the above with different `-Dbrowser=` values.
 
-### 5. Generate Reports
+### 6. Generate Reports
 ```bash
-# Generate Allure report
+# Generate and open Allure report
 mvn allure:serve
 
-# Generate Cucumber HTML report
-# Reports available at: target/cucumber-reports/cucumber.html
+# Generate report only (no browser)
+mvn allure:report
 ```
+Cucumber reports are generated automatically: `target/cucumber-reports/cucumber.html`, `cucumber.json`, `cucumber.xml`.
 
 ## 📝 Writing Tests
 
@@ -133,12 +159,13 @@ mvn test
 ```
 
 ### Run by Tags
+Available tags in features include `@smoke`, `@cart`, `@positive`, `@negative`, `@addToCart`, `@optimized`, `@dataDriven`, `@json`, `@edge`, `@boundary`, `@iphone`, etc.
 ```bash
 # Run smoke tests
 mvn test -Dcucumber.filter.tags="@smoke"
 
-# Run positive tests
-mvn test -Dcucumber.filter.tags="@positive"
+# Run positive add-to-cart tests
+mvn test -Dcucumber.filter.tags="@positive and @addToCart"
 
 # Run multiple tags
 mvn test -Dcucumber.filter.tags="@smoke and @cart"
@@ -149,10 +176,11 @@ mvn test -Dcucumber.filter.tags="@smoke and @cart"
 mvn test -Dcucumber.features="src/test/resources/features/addToCart.feature"
 ```
 
-### Parallel Execution
+### Browser / Headless Override
 ```bash
-mvn test -Dparallel=methods -DthreadCount=3
+mvn test -Dbrowser=webkit -Dheadless=true
 ```
+CI runs tests in a matrix (chromium, firefox, webkit) with headless mode.
 
 ## 📊 Reporting
 
@@ -178,21 +206,18 @@ mvn allure:report
 
 ## 🔧 Configuration
 
-### Browser Configuration
+### Browser and Test Data
 Edit `src/test/resources/config.properties`:
 ```properties
-# Browser options
 browser=chromium          # Options: chromium, firefox, webkit
 headless=false           # true/false
 default.timeout=30000    # milliseconds
+screenshot.on.failure=true
+video.record=false
+trace.record=false
+testdata.path=testdata/add-to-cart-data.json
 ```
-
-### Parallel Execution
-Configure in `pom.xml`:
-```xml
-<parallel>methods</parallel>
-<threadCount>3</threadCount>
-```
+Override via system properties: `-Dbrowser=firefox -Dheadless=true -Dtestdata.path=...` or env `TESTDATA_PATH`. Default test execution is single-threaded; CI uses a browser matrix for multi-browser runs.
 
 ## 🏗️ Architecture
 
@@ -210,7 +235,17 @@ The framework follows **Page Object Model (POM)** pattern:
   - `Hooks.java` - Cucumber lifecycle hooks
 
 - **Factory:** `src/main/java/com/amazon/factory/`
-  - `PlaywrightFactory.java` - Browser management
+  - `PlaywrightFactory.java` - Browser management (ThreadLocal for thread safety)
+
+- **Config:** `src/main/java/com/amazon/config/`
+  - `ConfigReader.java` - Reads config.properties
+  - `TestDataReader.java` - Loads JSON test data for data-driven scenarios
+
+- **Plugins:** `src/test/java/com/amazon/plugins/`
+  - `FlakyAndRcaPlugin.java` - Flaky scenario detection and Root Cause Analysis report
+
+- **API:** `src/test/java/com/amazon/api/`
+  - `ApiTest.java` - Playwright APIRequestContext API tests
 
 For detailed architecture, see [AUTOMATION_ARCHITECTURE.md](AUTOMATION_ARCHITECTURE.md)
 
@@ -231,29 +266,24 @@ Include Background steps and verification steps.
 - **[AUTOMATION_ARCHITECTURE.md](AUTOMATION_ARCHITECTURE.md)** - Detailed architecture documentation
 - **[TEST_CASE_GENERATION.md](TEST_CASE_GENERATION.md)** - Guide for generating test cases
 - **[TESTING_GUIDE.md](TESTING_GUIDE.md)** - Testing best practices and guidelines
+- **[INSTALL_JDK_MAVEN.md](INSTALL_JDK_MAVEN.md)** - Install JDK 17 and Maven on Windows
+- **[MCP_CONFIGURATION.md](MCP_CONFIGURATION.md)** - MCP / Cursor configuration
 
 ## 🔄 CI/CD Integration
 
 ### GitHub Actions
 Workflow file: `.github/workflows/ci.yml`
 
-**Triggers:**
-- Push to main branch
-- Pull requests
+**Triggers:** Push to `main` or `develop`; pull requests to `main`; `workflow_dispatch`.
 
-**Jobs:**
-- Build
-- Test
-- Generate reports
+**Jobs:** Runs tests in a matrix (chromium, firefox, webkit) with JDK 17, installs Playwright browsers, runs `mvn clean test -Dbrowser=... -Dheadless=true`, then generates Allure report and uploads artifacts (allure-results, cucumber-reports, logs).
 
 ### Jenkins
 Pipeline file: `Jenkinsfile`
 
-**Stages:**
-- Checkout
-- Build
-- Test
-- Publish Reports
+**Parameters:** `BROWSER` (chromium/firefox/webkit), `HEADLESS` (default true).
+
+**Stages:** Checkout → Install Dependencies (`mvn clean install -DskipTests`) → Install Playwright Browsers → Run Tests (`mvn test -Dbrowser=... -Dheadless=...`) → Generate Allure Report. Post: publish Allure results, archive cucumber reports and logs.
 
 ## 🐛 Troubleshooting
 
@@ -267,15 +297,12 @@ default.timeout=60000
 
 **Issue:** Browser not launching
 ```bash
-# Solution: Install Playwright browsers
-npx playwright install chromium
+# Solution: Install Playwright browsers (use Maven exec)
+mvn exec:java -e -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="install --with-deps"
 ```
 
-**Issue:** Parallel execution conflicts
-```bash
-# Solution: Ensure ThreadLocal is used in PlaywrightFactory
-# Already implemented in the framework
-```
+**Issue:** Allure attachments not showing (e.g. on Java 25+)
+The project uses an Allure AspectJ profile for JDK 17–22; on Java 25+ the agent is skipped to avoid class version errors. Allure report still generates; for full attachment support use JDK 17.
 
 ## 📈 Best Practices
 
@@ -321,5 +348,5 @@ For issues or questions:
 
 ---
 
-**Last Updated:** February 12, 2026  
+**Last Updated:** February 13, 2026  
 **Version:** 1.0-SNAPSHOT
